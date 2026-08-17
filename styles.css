@@ -1,15 +1,15 @@
 :root {
   color-scheme: light;
-  --bg: #f7f7f6;
+  --bg: #f8f6f4;
   --surface: #ffffff;
-  --surface-muted: #eeeeec;
+  --surface-muted: #efeae6;
   --text: #181b1d;
-  --muted: #6c7075;
-  --line: #dededb;
-  --accent: #3f5f7f;
-  --accent-strong: #273747;
-  --warm: #8a5a44;
-  --blue: #3f5f7f;
+  --muted: #6d6864;
+  --line: #e5ded7;
+  --accent: #445266;
+  --accent-strong: #2c3644;
+  --warm: #e2725b;
+  --blue: #445266;
   --shadow: 0 20px 60px rgba(24, 27, 29, 0.08);
   --page-gutter: 24px;
   --content-width: min(1280px, calc(100vw - 64px));
@@ -190,7 +190,7 @@ h3 {
 .button:hover,
 .button:focus-visible {
   transform: translateY(-1px);
-  outline: 2px solid rgba(63, 95, 127, 0.2);
+  outline: 2px solid rgba(68, 82, 102, 0.2);
   outline-offset: 2px;
 }
 
@@ -390,7 +390,7 @@ h3 {
   left: 16px;
   width: 2px;
   border-radius: 999px;
-  background: rgba(63, 95, 127, 0.18);
+  background: rgba(68, 82, 102, 0.18);
   content: "";
 }
 
@@ -406,7 +406,7 @@ h3 {
   height: 15px;
   border-radius: 999px;
   background: var(--accent);
-  box-shadow: 0 0 0 5px #f1f1ef;
+  box-shadow: 0 0 0 5px var(--bg);
   content: "";
 }
 
@@ -437,7 +437,7 @@ h3 {
   min-height: 30px;
   padding: 0 12px;
   border-radius: 999px;
-  background: rgba(63, 95, 127, 0.1);
+  background: rgba(68, 82, 102, 0.1);
   color: var(--accent);
   font-size: clamp(12px, 1.1vw, 13px);
   font-weight: 800;
@@ -472,8 +472,8 @@ h3 {
 
 .experience-links a:hover,
 .experience-links a:focus-visible {
-  border-color: rgba(63, 95, 127, 0.2);
-  background: rgba(63, 95, 127, 0.08);
+  border-color: rgba(68, 82, 102, 0.2);
+  background: rgba(68, 82, 102, 0.08);
   color: var(--accent);
   outline: 0;
 }
@@ -523,7 +523,7 @@ h3 {
 }
 
 .award-period {
-  background: rgba(63, 95, 127, 0.1);
+  background: rgba(68, 82, 102, 0.1);
   color: var(--accent);
 }
 
@@ -557,8 +557,8 @@ h3 {
 
 .award-inline-link:hover,
 .award-inline-link:focus-visible {
-  border-color: rgba(63, 95, 127, 0.24);
-  background: rgba(63, 95, 127, 0.08);
+  border-color: rgba(68, 82, 102, 0.24);
+  background: rgba(68, 82, 102, 0.08);
   color: var(--accent);
   outline: 0;
 }
@@ -690,7 +690,7 @@ h3 {
 
 .project-image-banner {
   padding: 0;
-  background: #f4f4f2;
+  background: var(--surface-muted);
 }
 
 .project-image-banner::after {
@@ -710,7 +710,7 @@ h3 {
 .project-image-banner.image-contain {
   align-items: center;
   justify-content: center;
-  background: #f4f7f6;
+  background: var(--surface-muted);
 }
 
 .project-image-banner.image-contain .project-image-main {
@@ -723,7 +723,7 @@ h3 {
 .project-image-banner.image-portrait {
   align-items: center;
   justify-content: center;
-  background: #f1f1ef;
+  background: var(--surface-muted);
 }
 
 .project-image-banner.image-portrait .project-image-main {
