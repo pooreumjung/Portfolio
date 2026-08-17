@@ -50,10 +50,8 @@ a {
   max-width: none;
   min-height: 72px;
   margin: 0 auto;
-  padding: 0 calc((100% - var(--content-width)) / 2);
-  background: rgba(247, 247, 246, 0.82);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
+  padding-inline: calc((100% - var(--content-width)) / 2);
+  background: var(--bg);
 }
 
 .brand {
@@ -1079,7 +1077,7 @@ h3 {
 @media (max-width: 860px) {
   .site-header {
     min-height: auto;
-    padding: 16px 0;
+    padding-block: 16px;
   }
 
   .nav {
