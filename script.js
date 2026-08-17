@@ -242,8 +242,6 @@ const projects = [
 ];
 
 const icons = {
-  github:
-    '<svg viewBox="0 0 16 16" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>',
   external:
     '<svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6.5 2.5H2.5v11h11v-4M9.5 2.5h4v4M13.2 2.8 7 9" stroke-linecap="round" stroke-linejoin="round"/></svg>',
 };
@@ -324,6 +322,20 @@ const createButton = ({ label, href, icon, primary = false }) => {
   return anchor;
 };
 
+// Renders `items` as <article> elements (each stamped with `className`
+// and filled via `template(item, index)`) into the element matched by
+// `selector`. Used for every "data array -> repeated card markup"
+// section on the page so each one only has to describe its own markup.
+const renderList = (selector, items, className, template) => {
+  const container = document.querySelector(selector);
+  items.forEach((item, index) => {
+    const article = document.createElement("article");
+    article.className = className;
+    article.innerHTML = template(item, index);
+    container.append(article);
+  });
+};
+
 document.querySelector("#profile-summary").textContent = profile.summary;
 
 const profileLinks = document.querySelector("#profile-links");
@@ -331,25 +343,24 @@ const contactLinks = document.querySelector("#contact-links");
 profile.links.forEach((link) => profileLinks.append(createButton(link)));
 profile.contacts.forEach((link) => contactLinks.append(createButton(link)));
 
-const aboutCertificationList = document.querySelector("#about-certification-list");
-certifications.forEach((certification) => {
-  const article = document.createElement("article");
-  article.className = "about-certification-card";
-  article.innerHTML = `
+renderList(
+  "#about-certification-list",
+  certifications,
+  "about-certification-card",
+  (certification) => `
     <div>
       <h4>${certification.title}</h4>
       <p>${certification.subtitle}</p>
     </div>
     <span>${certification.period}</span>
-  `;
-  aboutCertificationList.append(article);
-});
+  `,
+);
 
-const experienceList = document.querySelector("#experience-list");
-experiences.forEach((experience) => {
-  const article = document.createElement("article");
-  article.className = "experience-item reveal";
-  article.innerHTML = `
+renderList(
+  "#experience-list",
+  experiences,
+  "experience-item reveal",
+  (experience) => `
     <div class="experience-body">
       <div class="experience-head">
         <h3>${experience.title}</h3>
@@ -372,16 +383,14 @@ experiences.forEach((experience) => {
         ${experience.points.map((point) => `<li>${point}</li>`).join("")}
       </ul>
     </div>
-  `;
-  experienceList.append(article);
-});
+  `,
+);
 
-
-const projectList = document.querySelector("#project-list");
-projects.forEach((project, index) => {
-  const article = document.createElement("article");
-  article.className = "project-card reveal";
-  article.innerHTML = `
+renderList(
+  "#project-list",
+  projects,
+  "project-card reveal",
+  (project, index) => `
     ${
       project.image
         ? `<div class="project-banner project-image-banner image-${project.imageFit || "cover"}">
@@ -423,28 +432,26 @@ projects.forEach((project, index) => {
         }
       </div>
     </div>
-  `;
-  projectList.append(article);
-});
+  `,
+);
 
-const skillList = document.querySelector("#about-skill-list");
-skillGroups.forEach((skill) => {
-  const article = document.createElement("article");
-  article.className = "about-skill-card";
-  article.innerHTML = `
+renderList(
+  "#about-skill-list",
+  skillGroups,
+  "about-skill-card",
+  (skill) => `
     <h4>${skill.title}</h4>
     <div class="about-skill-tags">
       ${skill.items.map((item) => `<span>${item}</span>`).join("")}
     </div>
-  `;
-  skillList.append(article);
-});
+  `,
+);
 
-const writingList = document.querySelector("#writing-list");
-writings.forEach((item) => {
-  const article = document.createElement("article");
-  article.className = "writing-card reveal";
-  article.innerHTML = `
+renderList(
+  "#writing-list",
+  writings,
+  "writing-card reveal",
+  (item) => `
     <div class="writing-meta">
       <span>${item.date}</span>
       <span>${item.category}</span>
@@ -459,9 +466,8 @@ writings.forEach((item) => {
       </div>
       <span class="writing-arrow" aria-hidden="true">↗</span>
     </a>
-  `;
-  writingList.append(article);
-});
+  `,
+);
 
 const observer = new IntersectionObserver(
   (entries) => {
