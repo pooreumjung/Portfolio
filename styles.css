@@ -312,7 +312,7 @@ h3 {
 
 .about-certification-card span {
   flex: 0 0 auto;
-  color: var(--accent);
+  color: var(--accent-strong);
   font-size: 12px;
   font-weight: 800;
 }
@@ -438,7 +438,7 @@ h3 {
   padding: 0 12px;
   border-radius: 999px;
   background: rgba(68, 82, 102, 0.1);
-  color: var(--accent);
+  color: var(--accent-strong);
   font-size: clamp(12px, 1.1vw, 13px);
   font-weight: 800;
 }
@@ -524,7 +524,7 @@ h3 {
 
 .award-period {
   background: rgba(68, 82, 102, 0.1);
-  color: var(--accent);
+  color: var(--accent-strong);
 }
 
 .award-card h4 {
@@ -597,7 +597,7 @@ h3 {
 
 .certification-item span {
   flex: 0 0 auto;
-  color: var(--accent);
+  color: var(--accent-strong);
   font-weight: 800;
 }
 
@@ -814,7 +814,7 @@ h3 {
 }
 
 .project-status.is-active {
-  color: var(--accent);
+  color: var(--accent-strong);
 }
 
 .project-body h3 {
