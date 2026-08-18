@@ -139,8 +139,8 @@ const projects = [
       "숭실대학교 학식 서비스 서버 유지보수 및 운영 안정화",
     highlight:
       "서버 이전, Prometheus/Grafana 모니터링, 로그인 성공/실패 지표, CI/CD 개선",
-    image: "./assets/eat-ssu.jpeg",
-    imageFit: "portrait",
+    image: "./assets/eat-ssu-v2.png",
+    imageFit: "cover",
     links: [{ label: "GitHub", href: "https://github.com/EAT-SSU/Server" }],
     stack: [
       "Spring Boot",
@@ -153,16 +153,21 @@ const projects = [
       "GitHub Actions",
     ],
     intro:
-      "숭실대학교 학식 서비스 서버를 유지보수하는 프로젝트로, 신규 기능 개발보다 운영 안정성에 집중했습니다. 모니터링 체계 구축, CI/CD 개선, 다국어 지원, 릴리즈 관리를 담당했습니다.",
+      "누적 다운로드 6,000+를 기록한 숭실대학교 학식 정보 서비스입니다. 날짜별 학생식당 메뉴와 평점을 확인하고, 리뷰와 제휴 혜택까지 한눈에 볼 수 있습니다.",
     features: [
+      "날짜별 학생식당 메뉴·평점 조회",
+      "메뉴 리뷰 작성 및 사진 첨부",
+      "제휴 매장 할인 혜택 안내 (카카오맵·네이버지도 연동)",
+      "식당 위치·영업시간 정보 제공",
+    ],
+    contribution: "숭실대 학식 서비스 서버 유지보수를 담당하며 운영 안정성을 책임졌습니다.",
+    contributionPoints: [
       "Grafana Cloud·Prometheus 기반 모니터링 구축, 로그인 성공/실패 지표화",
       "PR 자동 테스트, 빌드/배포 job 분리 등 CI/CD 파이프라인 개선",
       "영어·일본어·베트남어 다국어(i18n) 지원 추가",
       "예외 로직 분리, Swagger 문서 분리 등 구조 리팩토링",
       "NPE, Flyway 마이그레이션 누락 등 운영 중 발생한 버그 수정",
     ],
-    contributionStat: "41개 PR · 39개 병합",
-    contribution: "숭실대 학식 서비스 서버 유지보수를 담당하며 전체 41개 PR 중 39개를 병합했습니다.",
     wrapup:
       "운영 중인 서비스에 Grafana Cloud 기반 모니터링과 로그인 성공/실패 지표를 도입하고, CI/CD 파이프라인을 개선하며 다국어(영/일/베) 지원을 추가했습니다.",
   },
@@ -189,15 +194,20 @@ const projects = [
       "GitHub Actions",
     ],
     intro:
-      "UMC 9기 백엔드 파트 리드로 참여한 질문 기반 자기이해 서비스입니다. 이메일·소셜·네이버 로그인을 반복적으로 안정화하고, 배포 파이프라인과 캐릭터 도메인을 함께 챙겼습니다.",
+      "UMC 9기 백엔드 파트 리드로 참여한 질문 기반 자기이해 서비스입니다. 질문에 답하며 스스로를 탐색하고, 그 답변이 캐릭터로 성장하는 경험을 제공합니다.",
     features: [
+      "이메일·카카오·네이버 소셜 로그인 지원",
+      "질문에 답하며 자신을 탐색하는 온보딩 콘텐츠",
+      "답변에 따라 성장하는 캐릭터 히스토리 제공",
+      "마이페이지에서 프로필·닉네임 관리",
+    ],
+    contribution: "UMC 9기 백엔드 파트 리드로 참여해 프로젝트 전반의 아키텍처와 개발을 이끌었습니다.",
+    contributionPoints: [
       "이메일·소셜·네이버 로그인 반복 안정화 (인증 관련 PR 9건)",
       "Blue-Green 배포 파이프라인 구축, main 브랜치 배포 전환",
-      "온보딩, 프로필, 캐릭터 성장 히스토리 등 유저 도메인 개발",
       "운영서버 디스코드 알림, Device Token 로직 최적화",
+      "백엔드 파트 리드로 아키텍처 전반 총괄",
     ],
-    contributionStat: "25개 PR · 24개 병합",
-    contribution: "UMC 9기 백엔드 파트 리드로 참여해 전체 25개 PR 중 24개를 병합했습니다.",
     wrapup:
       "Spring Boot Senior로 이메일/소셜/네이버 로그인을 반복 안정화하고 Blue-Green 배포 파이프라인을 구성했으며, UMC 데모데이 77개 팀 중 2등을 수상했습니다.",
   },
@@ -226,15 +236,19 @@ const projects = [
       "Gemini Image",
     ],
     intro:
-      "2주 스프린트로 초기 세팅부터 핵심 기능까지 완성한 AI 이상형 소개팅 서비스 백엔드입니다.",
+      "2주 스프린트로 초기 세팅부터 핵심 기능까지 완성한 AI 이상형 소개팅 서비스입니다.",
     features: [
-      "카카오톡 로그인 및 인증 기능 구현",
-      "AI 이미지 생성 기능, 결제 서비스 연동",
-      "온보딩, 마이페이지, 회원탈퇴 등 유저 기능 개발",
-      "Blue-Green 배포, 프로젝트 초기 세팅",
+      "카카오톡 로그인으로 간편 가입",
+      "AI로 이상형 이미지 생성",
+      "인앱 결제 기능",
+      "마이페이지·온보딩·회원탈퇴 등 유저 관리",
     ],
-    contributionStat: "15개 PR · 14개 병합",
-    contribution: "2주 스프린트 동안 전체 15개 PR 중 14개를 병합하며 서비스 초기 뼈대를 구축했습니다.",
+    contribution: "2주 스프린트 동안 서비스 초기 뼈대를 빠르게 구축했습니다.",
+    contributionPoints: [
+      "초기 프로젝트 세팅 및 Blue-Green 배포 구축",
+      "카카오 인증, 결제, AI 이미지 생성 API 연동 등 핵심 기능 단기간 구현",
+      "관리자 기능 구현, 503 에러 등 운영 이슈 대응",
+    ],
     wrapup:
       "2주라는 짧은 기간에 인증, 결제, AI 이미지 생성 기능을 포함한 서비스 초기 뼈대를 빠르게 구축했습니다.",
   },
@@ -266,16 +280,21 @@ const projects = [
       "Redis Stream",
     ],
     intro:
-      "KUSITMS 33기 산행 서비스 백엔드 리드로, 초기 아키텍처 설계부터 전체 도메인 개발까지 담당했습니다. 4개 프로젝트 중 가장 큰 비중을 차지합니다.",
+      "KUSITMS 33기 산행 서비스로, 등산 코스 추천부터 등산 기록, 커뮤니티까지 아우르는 앱입니다. 초기 아키텍처 설계부터 전체 도메인 개발까지 백엔드를 리드했습니다.",
     features: [
+      "레벨별 맞춤 등산 코스 추천",
+      "등산 기록 및 실시간 라이브 액티비티",
+      "자유게시판·세모피드 등 커뮤니티 기능",
+      "게시글 신고/차단, 좋아요·이모지 반응",
+      "등산 알림을 위한 FCM/APNs 푸시",
+    ],
+    contribution: "산행 서비스의 초기 아키텍처부터 전체 도메인 개발까지 리드했습니다.",
+    contributionPoints: [
       "BaseEntity, 글로벌 응답/예외 구조, Flyway 등 초기 아키텍처 설계",
-      "소셜 로그인, JWT 보안 강화 등 인증/인가",
-      "등산 기록, 산 추천, 커뮤니티(자유게시판·세모피드) 도메인 개발",
-      "FCM/APNs 푸시 알림 인프라 구축 및 iOS 미수신 이슈 해결",
+      "소셜 로그인, JWT 보안 강화 등 인증/인가 구현",
+      "iOS 푸시 미수신 이슈 등 FCM/APNs 인프라 안정화",
       "JaCoCo 기반 테스트 커버리지 CI 게이트 도입",
     ],
-    contributionStat: "68개 PR · 67개 병합",
-    contribution: "산행 서비스의 초기 아키텍처부터 전체 도메인 개발까지 리드하며 전체 68개 PR 중 67개를 병합했습니다.",
     wrapup:
       "초기 아키텍처 설계부터 인증, 등산·커뮤니티 도메인, FCM/APNs 푸시 인프라까지 개발하고, JaCoCo 기반 테스트 커버리지 게이트를 도입해 코드 품질을 관리했습니다. KUSITMS 33기 밋업데이에서 최우수상을 수상했습니다.",
   },
@@ -292,14 +311,14 @@ const projects = [
     imageFit: "wide",
     links: [{ label: "GitHub", href: "https://github.com/Ongi-Team/ongi-server" }],
     stack: ["Spring Boot", "JPA", "MySQL", "Docker", "Mosquitto"],
-    intro: "어르신 복약 관리를 위한 자동 디스펜서 연동 서비스 백엔드입니다.",
-    features: [
-      "복약 일정 관리 API 개발",
-      "보호자 공유 기능 구현",
-      "디스펜서 연동 흐름 설계 및 예외 케이스 정리",
-    ],
+    intro: "어르신 복약 관리를 위한 자동 디스펜서 연동 서비스입니다.",
+    features: ["복약 일정 관리", "보호자와 복약 현황 공유", "자동 디스펜서 연동"],
     contribution:
       "영 이노베이터 드림 프로젝트 2026에 백엔드 개발로 참여해 복약 일정과 디스펜서 연동 API를 개발했습니다.",
+    contributionPoints: [
+      "복약 일정 관리, 보호자 공유 API 개발",
+      "디스펜서 연동 흐름 설계 및 예외 케이스 정리",
+    ],
   },
 ];
 
@@ -576,8 +595,13 @@ const openProjectModal = (project) => {
           <ul>${project.features.map((feature) => `<li>${feature}</li>`).join("")}</ul>
         </section>
         <section class="project-modal-section">
-          <h4>나의 기여${project.contributionStat ? `<span class="project-modal-stat">${project.contributionStat}</span>` : ""}</h4>
+          <h4>나의 기여</h4>
           <p>${project.contribution}</p>
+          ${
+            project.contributionPoints
+              ? `<ul>${project.contributionPoints.map((point) => `<li>${point}</li>`).join("")}</ul>`
+              : ""
+          }
         </section>
         ${
           project.wrapup

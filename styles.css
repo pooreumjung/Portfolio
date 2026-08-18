@@ -696,12 +696,6 @@ body.modal-open {
   font-weight: 800;
 }
 
-.project-modal-stat {
-  color: var(--muted);
-  font-size: 12.5px;
-  font-weight: 600;
-}
-
 .project-modal-section p {
   margin: 0;
   color: var(--muted);
@@ -713,6 +707,10 @@ body.modal-open {
   padding-left: 18px;
   color: var(--muted);
   line-height: 1.8;
+}
+
+.project-modal-section p + ul {
+  margin-top: 10px;
 }
 
 .project-modal-section li::marker {
@@ -727,28 +725,10 @@ body.modal-open {
   border-top: 1px solid var(--line);
 }
 
-.project-card::before {
-  content: "";
-  position: absolute;
-  inset: -1.5px;
-  z-index: -1;
-  border-radius: 13px;
-  background: linear-gradient(135deg, var(--accent), var(--warm));
-  opacity: 0;
-  transition: opacity 220ms ease;
-}
-
 .project-card:hover,
 .project-card:focus-within {
   transform: translateY(-3px);
-  box-shadow:
-    0 20px 44px rgba(24, 27, 29, 0.12),
-    0 0 28px rgba(138, 90, 68, 0.16);
-}
-
-.project-card:hover::before,
-.project-card:focus-within::before {
-  opacity: 1;
+  box-shadow: 0 20px 44px rgba(24, 27, 29, 0.12);
 }
 
 .project-card:active {
