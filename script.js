@@ -152,6 +152,19 @@ const projects = [
       "Micrometer",
       "GitHub Actions",
     ],
+    intro:
+      "숭실대학교 학식 서비스 서버를 유지보수하는 프로젝트로, 신규 기능 개발보다 운영 안정성에 집중했습니다. 모니터링 체계 구축, CI/CD 개선, 다국어 지원, 릴리즈 관리를 담당했습니다.",
+    features: [
+      "Grafana Cloud·Prometheus 기반 모니터링 구축, 로그인 성공/실패 지표화",
+      "PR 자동 테스트, 빌드/배포 job 분리 등 CI/CD 파이프라인 개선",
+      "영어·일본어·베트남어 다국어(i18n) 지원 추가",
+      "예외 로직 분리, Swagger 문서 분리 등 구조 리팩토링",
+      "NPE, Flyway 마이그레이션 누락 등 운영 중 발생한 버그 수정",
+    ],
+    contributionStat: "41개 PR · 39개 병합",
+    contribution: "숭실대 학식 서비스 서버 유지보수를 담당하며 전체 41개 PR 중 39개를 병합했습니다.",
+    wrapup:
+      "운영 중인 서비스에 Grafana Cloud 기반 모니터링과 로그인 성공/실패 지표를 도입하고, CI/CD 파이프라인을 개선하며 다국어(영/일/베) 지원을 추가했습니다.",
   },
   {
     title: "Areumdap",
@@ -175,6 +188,18 @@ const projects = [
       "Docker",
       "GitHub Actions",
     ],
+    intro:
+      "UMC 9기 백엔드 파트 리드로 참여한 질문 기반 자기이해 서비스입니다. 이메일·소셜·네이버 로그인을 반복적으로 안정화하고, 배포 파이프라인과 캐릭터 도메인을 함께 챙겼습니다.",
+    features: [
+      "이메일·소셜·네이버 로그인 반복 안정화 (인증 관련 PR 9건)",
+      "Blue-Green 배포 파이프라인 구축, main 브랜치 배포 전환",
+      "온보딩, 프로필, 캐릭터 성장 히스토리 등 유저 도메인 개발",
+      "운영서버 디스코드 알림, Device Token 로직 최적화",
+    ],
+    contributionStat: "25개 PR · 24개 병합",
+    contribution: "UMC 9기 백엔드 파트 리드로 참여해 전체 25개 PR 중 24개를 병합했습니다.",
+    wrapup:
+      "Spring Boot Senior로 이메일/소셜/네이버 로그인을 반복 안정화하고 Blue-Green 배포 파이프라인을 구성했으며, UMC 데모데이 77개 팀 중 2등을 수상했습니다.",
   },
   {
     title: "SSUPICK",
@@ -200,6 +225,18 @@ const projects = [
       "Grok",
       "Gemini Image",
     ],
+    intro:
+      "2주 스프린트로 초기 세팅부터 핵심 기능까지 완성한 AI 이상형 소개팅 서비스 백엔드입니다.",
+    features: [
+      "카카오톡 로그인 및 인증 기능 구현",
+      "AI 이미지 생성 기능, 결제 서비스 연동",
+      "온보딩, 마이페이지, 회원탈퇴 등 유저 기능 개발",
+      "Blue-Green 배포, 프로젝트 초기 세팅",
+    ],
+    contributionStat: "15개 PR · 14개 병합",
+    contribution: "2주 스프린트 동안 전체 15개 PR 중 14개를 병합하며 서비스 초기 뼈대를 구축했습니다.",
+    wrapup:
+      "2주라는 짧은 기간에 인증, 결제, AI 이미지 생성 기능을 포함한 서비스 초기 뼈대를 빠르게 구축했습니다.",
   },
   {
     title: "SEMOSAN",
@@ -228,6 +265,19 @@ const projects = [
       "WebSocket",
       "Redis Stream",
     ],
+    intro:
+      "KUSITMS 33기 산행 서비스 백엔드 리드로, 초기 아키텍처 설계부터 전체 도메인 개발까지 담당했습니다. 4개 프로젝트 중 가장 큰 비중을 차지합니다.",
+    features: [
+      "BaseEntity, 글로벌 응답/예외 구조, Flyway 등 초기 아키텍처 설계",
+      "소셜 로그인, JWT 보안 강화 등 인증/인가",
+      "등산 기록, 산 추천, 커뮤니티(자유게시판·세모피드) 도메인 개발",
+      "FCM/APNs 푸시 알림 인프라 구축 및 iOS 미수신 이슈 해결",
+      "JaCoCo 기반 테스트 커버리지 CI 게이트 도입",
+    ],
+    contributionStat: "68개 PR · 67개 병합",
+    contribution: "산행 서비스의 초기 아키텍처부터 전체 도메인 개발까지 리드하며 전체 68개 PR 중 67개를 병합했습니다.",
+    wrapup:
+      "초기 아키텍처 설계부터 인증, 등산·커뮤니티 도메인, FCM/APNs 푸시 인프라까지 개발하고, JaCoCo 기반 테스트 커버리지 게이트를 도입해 코드 품질을 관리했습니다. KUSITMS 33기 밋업데이에서 최우수상을 수상했습니다.",
   },
   {
     title: "Ongi",
@@ -242,6 +292,14 @@ const projects = [
     imageFit: "wide",
     links: [{ label: "GitHub", href: "https://github.com/Ongi-Team/ongi-server" }],
     stack: ["Spring Boot", "JPA", "MySQL", "Docker", "Mosquitto"],
+    intro: "어르신 복약 관리를 위한 자동 디스펜서 연동 서비스 백엔드입니다.",
+    features: [
+      "복약 일정 관리 API 개발",
+      "보호자 공유 기능 구현",
+      "디스펜서 연동 흐름 설계 및 예외 케이스 정리",
+    ],
+    contribution:
+      "영 이노베이터 드림 프로젝트 2026에 백엔드 개발로 참여해 복약 일정과 디스펜서 연동 API를 개발했습니다.",
   },
 ];
 
@@ -487,6 +545,96 @@ const observer = new IntersectionObserver(
 document.querySelectorAll(".reveal").forEach((element) => observer.observe(element));
 
 document.querySelector("#year").textContent = new Date().getFullYear();
+
+// Project detail modal: clicking a card (but not a link inside it) opens
+// an overlay with the project's full write-up, built from the same
+// `projects` data used for the card itself.
+const projectModalOverlay = document.querySelector("#project-modal-overlay");
+
+const closeProjectModal = () => {
+  projectModalOverlay.classList.remove("is-open");
+  projectModalOverlay.setAttribute("aria-hidden", "true");
+  projectModalOverlay.innerHTML = "";
+  document.body.classList.remove("modal-open");
+};
+
+const openProjectModal = (project) => {
+  projectModalOverlay.innerHTML = `
+    <div class="project-modal" role="dialog" aria-modal="true" aria-label="${project.title}">
+      <button class="project-modal-close" type="button" aria-label="닫기">✕</button>
+      <div class="project-modal-scroll">
+        <h3>${project.title}</h3>
+        <div class="project-modal-tags">
+          ${project.stack.map((tag) => `<span class="project-tag">${tag}</span>`).join("")}
+        </div>
+        <section class="project-modal-section">
+          <h4>프로젝트 소개</h4>
+          <p>${project.intro}</p>
+        </section>
+        <section class="project-modal-section">
+          <h4>주요 기능</h4>
+          <ul>${project.features.map((feature) => `<li>${feature}</li>`).join("")}</ul>
+        </section>
+        <section class="project-modal-section">
+          <h4>나의 기여${project.contributionStat ? `<span class="project-modal-stat">${project.contributionStat}</span>` : ""}</h4>
+          <p>${project.contribution}</p>
+        </section>
+        ${
+          project.wrapup
+            ? `<section class="project-modal-section">
+                <h4>마무리</h4>
+                <p>${project.wrapup}</p>
+              </section>`
+            : ""
+        }
+        <div class="project-modal-links"></div>
+      </div>
+    </div>
+  `;
+
+  if (project.links) {
+    const linksContainer = projectModalOverlay.querySelector(".project-modal-links");
+    project.links.forEach((link) =>
+      linksContainer.append(createButton({ ...link, icon: socialIcons.github })),
+    );
+  }
+
+  projectModalOverlay.classList.add("is-open");
+  projectModalOverlay.setAttribute("aria-hidden", "false");
+  document.body.classList.add("modal-open");
+  projectModalOverlay.querySelector(".project-modal-close").addEventListener("click", closeProjectModal);
+};
+
+projectModalOverlay.addEventListener("click", (event) => {
+  if (event.target === projectModalOverlay) closeProjectModal();
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && projectModalOverlay.classList.contains("is-open")) {
+    closeProjectModal();
+  }
+});
+
+document.querySelectorAll(".project-card").forEach((card, index) => {
+  card.setAttribute("tabindex", "0");
+  card.setAttribute("role", "button");
+  card.setAttribute("aria-label", `${projects[index].title} 상세 보기`);
+
+  const openThisModal = () => openProjectModal(projects[index]);
+
+  card.addEventListener("click", (event) => {
+    if (event.target.closest("a")) return;
+    openThisModal();
+  });
+
+  card.addEventListener("keydown", (event) => {
+    if (event.target.closest("a")) return;
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      openThisModal();
+    }
+  });
+});
 
 // Hero mouse-follow sway: the hero copy nudges toward the cursor with a
 // slow eased transition (set in CSS), so it settles into place like it's
