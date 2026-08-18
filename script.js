@@ -28,7 +28,11 @@ const profile = {
   contacts: [
     { label: "GitHub", icon: socialIcons.github, href: "https://github.com/pooreumjung", primary: true },
     { label: "Email", icon: socialIcons.email, href: "mailto:pooreumjung02@naver.com" },
-    { label: "Blog", icon: socialIcons.blog, href: "https://pooreumjung.tistory.com/" },
+    {
+      label: "LinkedIn",
+      icon: socialIcons.linkedin,
+      href: "https://www.linkedin.com/in/%ED%91%B8%EB%A6%84-%EC%A0%95-abb77a2b8/",
+    },
   ],
 };
 
