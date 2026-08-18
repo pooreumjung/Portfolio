@@ -100,7 +100,13 @@ a {
 }
 
 .hero-copy {
+  --mx: 0;
+  --my: 0;
   max-width: 1120px;
+  transform: translate(calc(var(--mx) * 1px), calc(var(--my) * 1px))
+    rotate(calc(var(--mx) * 0.04deg));
+  transition: transform 650ms cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
 }
 
 .hero-copy > * {
@@ -549,6 +555,11 @@ h3 {
   .hero-copy > * {
     opacity: 1;
     animation: none;
+  }
+
+  .hero-copy {
+    transform: none;
+    transition: none;
   }
 }
 

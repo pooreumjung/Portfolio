@@ -487,3 +487,27 @@ const observer = new IntersectionObserver(
 document.querySelectorAll(".reveal").forEach((element) => observer.observe(element));
 
 document.querySelector("#year").textContent = new Date().getFullYear();
+
+// Hero mouse-follow sway: the hero copy nudges toward the cursor with a
+// slow eased transition (set in CSS), so it settles into place like it's
+// floating on water rather than snapping straight to the pointer.
+const heroSection = document.querySelector(".hero");
+const heroCopy = document.querySelector(".hero-copy");
+const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+if (heroSection && heroCopy && !prefersReducedMotion) {
+  const maxShift = 16;
+
+  heroSection.addEventListener("mousemove", (event) => {
+    const rect = heroSection.getBoundingClientRect();
+    const relX = (event.clientX - rect.left) / rect.width - 0.5;
+    const relY = (event.clientY - rect.top) / rect.height - 0.5;
+    heroCopy.style.setProperty("--mx", (relX * maxShift * 2).toFixed(2));
+    heroCopy.style.setProperty("--my", (relY * maxShift * 2).toFixed(2));
+  });
+
+  heroSection.addEventListener("mouseleave", () => {
+    heroCopy.style.setProperty("--mx", 0);
+    heroCopy.style.setProperty("--my", 0);
+  });
+}
