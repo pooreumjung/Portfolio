@@ -42,15 +42,15 @@ const experiences = [
     roles: ["Server Developer"],
     title: "Team EAT-SSU",
     links: [{ label: "Server", href: "https://github.com/EAT-SSU/Server" }],
-    points: ["숭실대학교 학식 서비스 서버 유지보수"],
+    points: ["숭실대학교 학식 서비스 서버 개발 및 유지보수"],
   },
   {
     period: "2026.07 ~ Present",
-    roles: ["Backend Developer", "교육기획팀장"],
+    roles: ["교육기획팀장", "Backend Developer"],
     title: "KUSITMS 34th",
     points: [
-      "LG전자, 버티 등 기업 산학협력 프로젝트 기획 총괄",
       "정기 세션 커리큘럼 기획",
+      "LG전자, 버티 등 기업 산학협력 프로젝트 기획 총괄",
     ],
   },
   {
@@ -84,7 +84,7 @@ const experiences = [
     period: "2021.12 ~ 2022.11",
     roles: ["President"],
     title: "SSU CSE Student Council",
-    points: ["컴퓨터학부 학생회장으로 조직 운영 및 커뮤니케이션 담당"],
+    points: ["학생회 조직 운영 및 학부 구성원 소통 총괄"],
   },
 ];
 
@@ -162,14 +162,20 @@ const projects = [
     ],
     contribution: "숭실대 학식 서비스 서버 유지보수를 담당하며 운영 안정성을 책임졌습니다.",
     contributionPoints: [
-      "Grafana Cloud·Prometheus 기반 모니터링 구축, 로그인 성공/실패 지표화",
-      "PR 자동 테스트, 빌드/배포 job 분리 등 CI/CD 파이프라인 개선",
+      '<a href="https://pooreumjung.tistory.com/574" target="_blank" rel="noreferrer">AWS 프리티어 만료로 RDS 데이터를 다른 계정으로 이전 ↗</a>',
+      '<a href="https://pooreumjung.tistory.com/584" target="_blank" rel="noreferrer">Gradle 중복 빌드 제거로 CI 빌드 시간 절반 단축 ↗</a>',
+      "운영 중인 DB에 Flyway 도입 및 베이스라인 적용",
+      '<a href="https://pooreumjung.tistory.com/587" target="_blank" rel="noreferrer">메모리 제한된 EC2 환경에 Grafana Cloud·Alloy 기반 모니터링 구축 ↗</a>',
+      "로그인 성공/실패 지표 Micrometer 카운터 추가",
+      '<a href="https://pooreumjung.tistory.com/588" target="_blank" rel="noreferrer">PR 시점에 테스트를 자동 실행하는 CI 워크플로우 신설 ↗</a>',
+      '<a href="https://pooreumjung.tistory.com/585" target="_blank" rel="noreferrer">배포 스크립트를 포트 기반 컨테이너 관리로 개선해 운영 안정성 확보 ↗</a>',
+      "빌드/배포 job 분리로 CI/CD 파이프라인 개선",
       "영어·일본어·베트남어 다국어(i18n) 지원 추가",
-      "예외 로직 분리, Swagger 문서 분리 등 구조 리팩토링",
+      "예외 로직 분리, Swagger 문서 분리 등 패키지 구조 리팩토링",
       "NPE, Flyway 마이그레이션 누락 등 운영 중 발생한 버그 수정",
     ],
     wrapup:
-      "운영 중인 서비스에 Grafana Cloud 기반 모니터링과 로그인 성공/실패 지표를 도입하고, CI/CD 파이프라인을 개선하며 다국어(영/일/베) 지원을 추가했습니다.",
+      "실사용자가 있는 운영 서비스다 보니, 새 기능을 추가하는 것보다 이미 동작하는 걸 깨뜨리지 않는 게 더 중요하다는 걸 체감했습니다. 문제가 생기면 감으로 짐작하기보다 지표부터 확인하고 원인을 좁혀가는 습관이 생겼고, 작은 변경 하나에도 운영에 미칠 영향을 먼저 생각하게 됐습니다.",
   },
   {
     title: "Areumdap",
@@ -181,7 +187,7 @@ const projects = [
       "UMC 9기 백엔드 파트 리드로 참여한 질문 기반 자기이해 서비스",
     highlight:
       "백엔드 파트 리드, Blue-Green 배포 구축, UMC 데모데이 77개 팀 중 2등 수상",
-    image: "./assets/areumdap.png",
+    image: "./assets/areumdap-v2.png",
     imageFit: "cover",
     links: [{ label: "GitHub", href: "https://github.com/AreumDap/Areumdap-backend" }],
     stack: [
@@ -259,7 +265,7 @@ const projects = [
     status: "진행 중",
     statusActive: true,
     description:
-      "KUSITMS 33기 산행 서비스 백엔드 리드",
+      "KUSITMS 33기 등산 서비스 백엔드 개발",
     highlight:
       "초기 아키텍처, 인증, 등산·커뮤니티 도메인, FCM/APNs 푸시, JaCoCo 품질 게이트",
     image: "./assets/semosan-v2.png",
@@ -280,7 +286,7 @@ const projects = [
       "Redis Stream",
     ],
     intro:
-      "KUSITMS 33기 산행 서비스로, 등산 코스 추천부터 등산 기록, 커뮤니티까지 아우르는 앱입니다. 초기 아키텍처 설계부터 전체 도메인 개발까지 백엔드를 리드했습니다.",
+      "KUSITMS 33기 등산 서비스로, 등산 코스 추천부터 등산 기록, 커뮤니티까지 아우르는 앱입니다. 초기 아키텍처 설계부터 전체 도메인 개발까지 백엔드를 리드했습니다.",
     features: [
       "레벨별 맞춤 등산 코스 추천",
       "등산 기록 및 실시간 라이브 액티비티",
@@ -288,7 +294,7 @@ const projects = [
       "게시글 신고/차단, 좋아요·이모지 반응",
       "등산 알림을 위한 FCM/APNs 푸시",
     ],
-    contribution: "산행 서비스의 초기 아키텍처부터 전체 도메인 개발까지 리드했습니다.",
+    contribution: "등산 서비스의 초기 아키텍처부터 전체 도메인 개발까지 리드했습니다.",
     contributionPoints: [
       "BaseEntity, 글로벌 응답/예외 구조, Flyway 등 초기 아키텍처 설계",
       "소셜 로그인, JWT 보안 강화 등 인증/인가 구현",

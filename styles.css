@@ -717,6 +717,17 @@ body.modal-open {
   color: var(--accent);
 }
 
+.project-modal-section li a {
+  color: var(--accent-strong);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.project-modal-section li a:hover,
+.project-modal-section li a:focus-visible {
+  color: var(--warm);
+}
+
 .project-modal-links {
   display: flex;
   gap: 8px;
