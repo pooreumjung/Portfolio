@@ -36,6 +36,16 @@ a {
   text-decoration: none;
 }
 
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 0%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent), var(--warm));
+}
+
 .site-header {
   position: sticky;
   top: 0;
@@ -97,11 +107,52 @@ a {
   text-align: left;
   min-height: calc(100vh - 72px);
   padding-top: 56px;
+  overflow: hidden;
+}
+
+.hero-blob {
+  position: absolute;
+  z-index: 0;
+  border-radius: 50%;
+  filter: blur(90px);
+  opacity: 0.3;
+  pointer-events: none;
+  animation: hero-blob-float 8s ease-in-out infinite;
+}
+
+.hero-blob-1 {
+  top: 6%;
+  left: 2%;
+  width: 320px;
+  height: 320px;
+  background: var(--accent);
+}
+
+.hero-blob-2 {
+  right: 6%;
+  bottom: 2%;
+  width: 380px;
+  height: 380px;
+  background: var(--warm);
+  animation-delay: 1.6s;
+}
+
+@keyframes hero-blob-float {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(22px, -26px);
+  }
 }
 
 .hero-copy {
   --mx: 0;
   --my: 0;
+  position: relative;
+  z-index: 1;
   max-width: 1120px;
   transform: translate(calc(var(--mx) * 1px), calc(var(--my) * 1px))
     rotate(calc(var(--mx) * 0.04deg));
@@ -561,6 +612,10 @@ h3 {
     transform: none;
     transition: none;
   }
+
+  .hero-blob {
+    animation: none;
+  }
 }
 
 .project-list {
@@ -575,6 +630,7 @@ h3 {
 }
 
 .project-card {
+  position: relative;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -588,10 +644,28 @@ h3 {
     border-color 220ms ease;
 }
 
+.project-card::before {
+  content: "";
+  position: absolute;
+  inset: -1.5px;
+  z-index: -1;
+  border-radius: 13px;
+  background: linear-gradient(135deg, var(--accent), var(--warm));
+  opacity: 0;
+  transition: opacity 220ms ease;
+}
+
 .project-card:hover,
 .project-card:focus-within {
   transform: translateY(-3px);
-  box-shadow: 0 20px 44px rgba(24, 27, 29, 0.12);
+  box-shadow:
+    0 20px 44px rgba(24, 27, 29, 0.12),
+    0 0 28px rgba(138, 90, 68, 0.16);
+}
+
+.project-card:hover::before,
+.project-card:focus-within::before {
+  opacity: 1;
 }
 
 .project-card:active {

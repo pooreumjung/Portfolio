@@ -511,3 +511,28 @@ if (heroSection && heroCopy && !prefersReducedMotion) {
     heroCopy.style.setProperty("--my", 0);
   });
 }
+
+// Scroll progress bar: fills left-to-right as the page is scrolled,
+// tracking how far through the document the reader currently is.
+const scrollProgress = document.querySelector("#scroll-progress");
+
+if (scrollProgress) {
+  let ticking = false;
+
+  const updateScrollProgress = () => {
+    const scrollTop = window.scrollY;
+    const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+    const percent = scrollable > 0 ? (scrollTop / scrollable) * 100 : 0;
+    scrollProgress.style.width = `${percent}%`;
+    ticking = false;
+  };
+
+  window.addEventListener("scroll", () => {
+    if (!ticking) {
+      requestAnimationFrame(updateScrollProgress);
+      ticking = true;
+    }
+  });
+
+  updateScrollProgress();
+}
