@@ -93,6 +93,7 @@ export const itemListStyles = css({
   gap: "9px",
   margin: "14px 0 0",
   paddingLeft: "22px",
+  listStyleType: "disc",
   color: "muted",
   fontSize: "sm",
   fontWeight: "700",

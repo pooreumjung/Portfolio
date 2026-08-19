@@ -2,7 +2,7 @@ import type { Project } from "@/types/projects";
 
 export const projects: Project[] = [
   {
-    title: "EAT-SSU Server",
+    title: "EAT-SSU",
     period: "Backend · Spring Boot",
     year: "2026",
     status: "운영 중",

@@ -91,6 +91,7 @@ export const sectionTextStyles = css({
 export const sectionListStyles = css({
   margin: "10px 0 0",
   paddingLeft: "18px",
+  listStyleType: "disc",
   color: "muted",
   lineHeight: "1.8",
   "& li::marker": { color: "accent" },
