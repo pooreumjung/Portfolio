@@ -1,0 +1,130 @@
+import type { Project } from "@/types/projects";
+
+export const projects: Project[] = [
+  {
+    title: "EAT-SSU Server",
+    period: "Backend · Spring Boot",
+    year: "2026",
+    status: "운영 중",
+    statusActive: true,
+    description: "숭실대학교 학식 서비스 서버 유지보수 및 운영 안정화",
+    highlight: "서버 이전, Prometheus/Grafana 모니터링, 로그인 성공/실패 지표, CI/CD 개선",
+    image: "/eat-ssu-v2.png",
+    imageFit: "cover",
+    links: [{ label: "GitHub", href: "https://github.com/EAT-SSU/Server" }],
+    stack: ["Spring Boot", "JPA", "MySQL", "Flyway", "Prometheus", "Grafana Cloud", "Micrometer", "GitHub Actions"],
+    intro:
+      "2022년 컴퓨터학부 팀 프로젝트에서 출발한 숭실대학교 학식 리뷰 앱으로, iOS·Android로 서비스 중입니다. 학생식당·도담식당·푸드코트·기숙사 식당 등 학내 식당 메뉴를 한눈에 비교하고 리뷰로 정보를 공유하며, 운영시간과 위치까지 확인할 수 있습니다.",
+    features: [
+      "날짜별 학생식당 메뉴·평점 조회",
+      "메뉴 리뷰 작성 및 사진 첨부",
+      "제휴 매장 할인 혜택 안내 (카카오맵·네이버지도 연동)",
+      "식당 위치·영업시간 정보 제공",
+    ],
+    contribution: "숭실대 학식 서비스 서버 유지보수를 담당하며 운영 안정성을 책임졌습니다.",
+    contributionPoints: [
+      { text: "AWS 프리티어 만료로 RDS 데이터를 다른 계정으로 이전", href: "https://pooreumjung.tistory.com/574" },
+      { text: "Gradle 중복 빌드 제거로 CI 빌드 시간 절반 단축", href: "https://pooreumjung.tistory.com/584" },
+      { text: "운영 중인 DB에 Flyway 도입 및 베이스라인 적용" },
+      {
+        text: "메모리 제한된 EC2 환경에 Grafana Cloud·Alloy 기반 모니터링 구축",
+        href: "https://pooreumjung.tistory.com/587",
+      },
+      { text: "로그인 성공/실패 지표 Micrometer 카운터 추가" },
+      { text: "PR 시점에 테스트를 자동 실행하는 CI 워크플로우 신설", href: "https://pooreumjung.tistory.com/588" },
+      {
+        text: "배포 스크립트를 포트 기반 컨테이너 관리로 개선해 운영 안정성 확보",
+        href: "https://pooreumjung.tistory.com/585",
+      },
+      { text: "빌드/배포 job 분리로 CI/CD 파이프라인 개선" },
+      { text: "영어·일본어·베트남어 다국어(i18n) 지원 추가" },
+      { text: "예외 로직 분리, Swagger 문서 분리 등 패키지 구조 리팩토링" },
+      { text: "NPE, Flyway 마이그레이션 누락 등 운영 중 발생한 버그 수정" },
+    ],
+    wrapup:
+      "실사용자가 있는 운영 서비스다 보니, 새 기능을 추가하는 것보다 이미 동작하는 걸 깨뜨리지 않는 게 더 중요하다는 걸 체감했습니다. 문제가 생기면 감으로 짐작하기보다 지표부터 확인하고 원인을 좁혀가는 습관이 생겼고, 작은 변경 하나에도 운영에 미칠 영향을 먼저 생각하게 됐습니다.",
+  },
+  {
+    title: "SEMOSAN",
+    period: "KUSITMS 33rd · Backend",
+    year: "2026",
+    status: "진행 중",
+    statusActive: true,
+    description: "KUSITMS 33기 등산 서비스 백엔드 개발",
+    highlight: "초기 아키텍처, 인증, 등산·커뮤니티 도메인, FCM/APNs 푸시, JaCoCo 품질 게이트",
+    image: "/semosan-v2.png",
+    imageFit: "cover",
+    links: [{ label: "GitHub", href: "https://github.com/SEMOSAN/SEMOSAN_BE" }],
+    stack: [
+      "Spring Boot",
+      "JPA",
+      "PostgreSQL",
+      "Flyway",
+      "FCM",
+      "APNs",
+      "JaCoCo",
+      "K8s",
+      "Argo CD",
+      "MinIO",
+      "WebSocket",
+      "Redis Stream",
+    ],
+    intro:
+      "KUSITMS 33기 등산 서비스로, 등산 코스 추천부터 등산 기록, 커뮤니티까지 아우르는 앱입니다. 초기 아키텍처 설계부터 전체 도메인 개발까지 백엔드를 리드했습니다.",
+    features: [
+      "레벨별 맞춤 등산 코스 추천",
+      "등산 기록 및 실시간 라이브 액티비티",
+      "자유게시판·세모피드 등 커뮤니티 기능",
+      "게시글 신고/차단, 좋아요·이모지 반응",
+      "등산 알림을 위한 FCM/APNs 푸시",
+    ],
+    contribution: "등산 서비스의 초기 아키텍처부터 전체 도메인 개발까지 리드했습니다.",
+    contributionPoints: [
+      { text: "BaseEntity, 글로벌 응답/예외 구조, Flyway 등 초기 아키텍처 설계" },
+      { text: "소셜 로그인, JWT 보안 강화 등 인증/인가 구현" },
+      { text: "iOS 푸시 미수신 이슈 등 FCM/APNs 인프라 안정화" },
+      { text: "JaCoCo 기반 테스트 커버리지 CI 게이트 도입" },
+    ],
+    wrapup:
+      "초기 아키텍처 설계부터 인증, 등산·커뮤니티 도메인, FCM/APNs 푸시 인프라까지 개발하고, JaCoCo 기반 테스트 커버리지 게이트를 도입해 코드 품질을 관리했습니다. KUSITMS 33기 밋업데이에서 최우수상을 수상했습니다.",
+  },
+  {
+    title: "Areumdap",
+    period: "UMC 9th · Backend",
+    year: "2026",
+    status: "완료",
+    statusActive: false,
+    description: "UMC 9기 백엔드 파트 리드로 참여한 질문 기반 자기이해 서비스",
+    highlight: "백엔드 파트 리드, Blue-Green 배포 구축, UMC 데모데이 77개 팀 중 2등 수상",
+    image: "/areumdap-v2.png",
+    imageFit: "cover",
+    links: [{ label: "GitHub", href: "https://github.com/AreumDap/Areumdap-backend" }],
+    stack: ["Spring Boot", "JPA", "MySQL", "OAuth", "Blue-Green Deploy", "Docker", "GitHub Actions"],
+    intro:
+      "UMC 9기 백엔드 파트 리드로 참여한 질문 기반 자기이해 서비스입니다. 질문에 답하며 스스로를 탐색하고, 그 답변이 캐릭터로 성장하는 경험을 제공합니다.",
+    features: [
+      "이메일·카카오·네이버 소셜 로그인 지원",
+      "질문에 답하며 자신을 탐색하는 온보딩 콘텐츠",
+      "답변에 따라 성장하는 캐릭터 히스토리 제공",
+      "마이페이지에서 프로필·닉네임 관리",
+    ],
+    contribution: "UMC 9기 백엔드 파트 리드로 참여해 프로젝트 전반의 아키텍처와 개발을 이끌었습니다.",
+    contributionPoints: [
+      {
+        text: "백엔드 파트 리더로서 GitHub Flow 기반 브랜치 전략, 코드 리뷰 프로세스, API 명세서, 프로젝트 구조 등을 정의해 협업 기준 수립",
+      },
+      {
+        text: "이메일·소셜(카카오)·네이버 로그인을 반복적으로 구현하고 안정화 (로그인 방식 변경, JWT 예외 응답 커스터마이징, 버그 수정 등)",
+      },
+      {
+        text: "이메일 인증코드 발송을 SQS 기반 비동기 처리로 전환해 서버 부하 분산",
+        href: "https://github.com/AreumDap/Areumdap-backend/pull/16",
+      },
+      { text: "프로젝트 환경설정부터 Blue-Green 배포, main 브랜치 전환까지 배포 파이프라인 구축" },
+      { text: "온보딩 저장, 유저 프로필, 캐릭터 성장 히스토리 등 유저·캐릭터 도메인 개발" },
+      { text: "운영서버 디스코드 알림 연동, Device Token 로직 리팩토링·최적화" },
+    ],
+    wrapup:
+      "Spring Boot Senior로 이메일/소셜/네이버 로그인을 반복 안정화하고 Blue-Green 배포 파이프라인을 구성했으며, UMC 데모데이 77개 팀 중 2등을 수상했습니다.",
+  },
+];
