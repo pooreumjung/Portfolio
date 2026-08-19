@@ -207,6 +207,10 @@ h3 {
   margin-top: 28px;
 }
 
+.hero-projects-btn {
+  display: none;
+}
+
 .button {
   display: inline-flex;
   align-items: center;
@@ -1160,6 +1164,12 @@ body.modal-open {
     min-height: auto;
     padding-top: 48px;
     padding-bottom: 72px;
+  }
+
+  .hero-projects-btn {
+    display: inline-flex;
+    order: -1;
+    width: 100%;
   }
 
   .project-list {

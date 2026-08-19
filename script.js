@@ -178,87 +178,6 @@ const projects = [
       "실사용자가 있는 운영 서비스다 보니, 새 기능을 추가하는 것보다 이미 동작하는 걸 깨뜨리지 않는 게 더 중요하다는 걸 체감했습니다. 문제가 생기면 감으로 짐작하기보다 지표부터 확인하고 원인을 좁혀가는 습관이 생겼고, 작은 변경 하나에도 운영에 미칠 영향을 먼저 생각하게 됐습니다.",
   },
   {
-    title: "Areumdap",
-    period: "UMC 9th · Backend",
-    year: "2026",
-    status: "완료",
-    statusActive: false,
-    description:
-      "UMC 9기 백엔드 파트 리드로 참여한 질문 기반 자기이해 서비스",
-    highlight:
-      "백엔드 파트 리드, Blue-Green 배포 구축, UMC 데모데이 77개 팀 중 2등 수상",
-    image: "./assets/areumdap-v2.png",
-    imageFit: "cover",
-    links: [{ label: "GitHub", href: "https://github.com/AreumDap/Areumdap-backend" }],
-    stack: [
-      "Spring Boot",
-      "JPA",
-      "MySQL",
-      "OAuth",
-      "Blue-Green Deploy",
-      "Docker",
-      "GitHub Actions",
-    ],
-    intro:
-      "UMC 9기 백엔드 파트 리드로 참여한 질문 기반 자기이해 서비스입니다. 질문에 답하며 스스로를 탐색하고, 그 답변이 캐릭터로 성장하는 경험을 제공합니다.",
-    features: [
-      "이메일·카카오·네이버 소셜 로그인 지원",
-      "질문에 답하며 자신을 탐색하는 온보딩 콘텐츠",
-      "답변에 따라 성장하는 캐릭터 히스토리 제공",
-      "마이페이지에서 프로필·닉네임 관리",
-    ],
-    contribution: "UMC 9기 백엔드 파트 리드로 참여해 프로젝트 전반의 아키텍처와 개발을 이끌었습니다.",
-    contributionPoints: [
-      "이메일·소셜·네이버 로그인 반복 안정화 (인증 관련 PR 9건)",
-      "Blue-Green 배포 파이프라인 구축, main 브랜치 배포 전환",
-      "운영서버 디스코드 알림, Device Token 로직 최적화",
-      "백엔드 파트 리드로 아키텍처 전반 총괄",
-    ],
-    wrapup:
-      "Spring Boot Senior로 이메일/소셜/네이버 로그인을 반복 안정화하고 Blue-Green 배포 파이프라인을 구성했으며, UMC 데모데이 77개 팀 중 2등을 수상했습니다.",
-  },
-  {
-    title: "SSUPICK",
-    period: "SSUpick · Backend",
-    year: "2026",
-    status: "완료",
-    statusActive: false,
-    description:
-      "2주 스프린트로 구축한 AI 이상형 소개팅 서비스 백엔드",
-    highlight:
-      "초기 세팅, 카카오 인증, 결제, AI 이미지 생성, 관리자 기능까지 단기간 구현",
-    image: "./assets/ssupick.png",
-    imageFit: "cover",
-    links: [{ label: "GitHub", href: "https://github.com/SSUpick/SSUPICK_BE" }],
-    stack: [
-      "Spring Boot",
-      "JPA",
-      "MySQL",
-      "OAuth",
-      "Payment API",
-      "CodeDeploy",
-      "S3",
-      "Grok",
-      "Gemini Image",
-    ],
-    intro:
-      "AI 캐릭터 이미지 기반 아바타 소개팅 웹 서비스입니다. 실사진 노출 없이 AI 변환 이미지로 프로필 카드를 등록·조회하는 축제 기간 MVP 서비스입니다.",
-    features: [
-      "카카오톡 로그인으로 간편 가입",
-      "AI로 이상형 이미지 생성",
-      "인앱 결제 기능",
-      "마이페이지·온보딩·회원탈퇴 등 유저 관리",
-    ],
-    contribution: "2주 스프린트 동안 서비스 초기 뼈대를 빠르게 구축했습니다.",
-    contributionPoints: [
-      "초기 프로젝트 세팅 및 Blue-Green 배포 구축",
-      "카카오 인증, 결제, AI 이미지 생성 API 연동 등 핵심 기능 단기간 구현",
-      "관리자 기능 구현, 503 에러 등 운영 이슈 대응",
-    ],
-    wrapup:
-      "2주라는 짧은 기간에 인증, 결제, AI 이미지 생성 기능을 포함한 서비스 초기 뼈대를 빠르게 구축했습니다.",
-  },
-  {
     title: "SEMOSAN",
     period: "KUSITMS 33rd · Backend",
     year: "2026",
@@ -305,26 +224,46 @@ const projects = [
       "초기 아키텍처 설계부터 인증, 등산·커뮤니티 도메인, FCM/APNs 푸시 인프라까지 개발하고, JaCoCo 기반 테스트 커버리지 게이트를 도입해 코드 품질을 관리했습니다. KUSITMS 33기 밋업데이에서 최우수상을 수상했습니다.",
   },
   {
-    title: "Ongi",
-    period: "Young Innovator Dream Project 2026 · Backend",
+    title: "Areumdap",
+    period: "UMC 9th · Backend",
     year: "2026",
     status: "완료",
     statusActive: false,
-    description: "어르신 복약 관리를 위한 자동 디스펜서 연동 서비스 백엔드",
+    description:
+      "UMC 9기 백엔드 파트 리드로 참여한 질문 기반 자기이해 서비스",
     highlight:
-      "복약 일정, 보호자 공유, 디스펜서 연동 흐름에 맞춘 API와 예외 케이스 정리",
-    image: "./assets/ongi.png",
-    imageFit: "wide",
-    links: [{ label: "GitHub", href: "https://github.com/Ongi-Team/ongi-server" }],
-    stack: ["Spring Boot", "JPA", "MySQL", "Docker", "Mosquitto"],
-    intro: "어르신 복약 관리를 위한 자동 디스펜서 연동 서비스입니다.",
-    features: ["복약 일정 관리", "보호자와 복약 현황 공유", "자동 디스펜서 연동"],
-    contribution:
-      "영 이노베이터 드림 프로젝트 2026에 백엔드 개발로 참여해 복약 일정과 디스펜서 연동 API를 개발했습니다.",
-    contributionPoints: [
-      "복약 일정 관리, 보호자 공유 API 개발",
-      "디스펜서 연동 흐름 설계 및 예외 케이스 정리",
+      "백엔드 파트 리드, Blue-Green 배포 구축, UMC 데모데이 77개 팀 중 2등 수상",
+    image: "./assets/areumdap-v2.png",
+    imageFit: "cover",
+    links: [{ label: "GitHub", href: "https://github.com/AreumDap/Areumdap-backend" }],
+    stack: [
+      "Spring Boot",
+      "JPA",
+      "MySQL",
+      "OAuth",
+      "Blue-Green Deploy",
+      "Docker",
+      "GitHub Actions",
     ],
+    intro:
+      "UMC 9기 백엔드 파트 리드로 참여한 질문 기반 자기이해 서비스입니다. 질문에 답하며 스스로를 탐색하고, 그 답변이 캐릭터로 성장하는 경험을 제공합니다.",
+    features: [
+      "이메일·카카오·네이버 소셜 로그인 지원",
+      "질문에 답하며 자신을 탐색하는 온보딩 콘텐츠",
+      "답변에 따라 성장하는 캐릭터 히스토리 제공",
+      "마이페이지에서 프로필·닉네임 관리",
+    ],
+    contribution: "UMC 9기 백엔드 파트 리드로 참여해 프로젝트 전반의 아키텍처와 개발을 이끌었습니다.",
+    contributionPoints: [
+      "백엔드 파트 리더로서 GitHub Flow 기반 브랜치 전략, 코드 리뷰 프로세스, API 명세서, 프로젝트 구조 등을 정의해 협업 기준 수립",
+      "이메일·소셜(카카오)·네이버 로그인을 반복적으로 구현하고 안정화 (로그인 방식 변경, JWT 예외 응답 커스터마이징, 버그 수정 등)",
+      '<a href="https://github.com/AreumDap/Areumdap-backend/pull/16" target="_blank" rel="noreferrer">이메일 인증코드 발송을 SQS 기반 비동기 처리로 전환해 서버 부하 분산 ↗</a>',
+      "프로젝트 환경설정부터 Blue-Green 배포, main 브랜치 전환까지 배포 파이프라인 구축",
+      "온보딩 저장, 유저 프로필, 캐릭터 성장 히스토리 등 유저·캐릭터 도메인 개발",
+      "운영서버 디스코드 알림 연동, Device Token 로직 리팩토링·최적화",
+    ],
+    wrapup:
+      "Spring Boot Senior로 이메일/소셜/네이버 로그인을 반복 안정화하고 Blue-Green 배포 파이프라인을 구성했으며, UMC 데모데이 77개 팀 중 2등을 수상했습니다.",
   },
 ];
 
@@ -344,7 +283,7 @@ const skillGroups = [
   },
   {
     title: "Infrastructure",
-    items: ["Docker", "AWS", "K8s", "Argo CD", "GitHub Actions"],
+    items: ["Docker", "AWS", "K8s", "Argo CD", "GitHub Actions", "Nginx"],
   },
   {
     title: "Observability",
