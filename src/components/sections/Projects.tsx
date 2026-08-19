@@ -12,23 +12,24 @@ import {
   bodyStyles,
   cardStyles,
   descriptionStyles,
+  detailLinkStyles,
   footerActionLinkStyles,
   footerActionsStyles,
-  footerLabelStyles,
   footerRowStyles,
   gridStyles,
+  highlightMetricStyles,
   highlightStyles,
   highlightTextStyles,
   imageBannerStyles,
-  metaRowStyles,
+  periodStatusStyles,
   sectionWrapperStyles,
-  statusActiveStyles,
-  statusStyles,
+  tagOverflowStyles,
+  tagPrimaryStyles,
   tagRowStyles,
   tagStyles,
+  titleRowStyles,
   titleStyles,
   toneGradients,
-  yearStyles,
 } from "@/styles/styles/projects.styles";
 import { Card } from "@ui/cards";
 import { ExternalLinkIcon } from "@ui/icons/SocialIcons";
@@ -40,10 +41,30 @@ import Image from "next/image";
 import { useState } from "react";
 import type { Project } from "@/types/projects";
 
+// Cards show at most this many stack tags before collapsing the rest into
+// a "+N" chip — keeps a 12-tag project (SEMOSAN) from spilling past 1.5 rows.
+const MAX_VISIBLE_TAGS = 5;
+
+// Wraps `metric` (e.g. "50%", "2등") in an accent span wherever it appears
+// inside `text`, so one concrete result stands out from the sentence around it.
+function renderHighlight(text: string, metric?: string) {
+  if (!metric) return text;
+  const index = text.indexOf(metric);
+  if (index === -1) return text;
+  return (
+    <>
+      {text.slice(0, index)}
+      <span className={highlightMetricStyles}>{metric}</span>
+      {text.slice(index + metric.length)}
+    </>
+  );
+}
+
 export default function Projects() {
   const { ref, inView } = useScrollAnimation({ threshold: 0.15 });
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [expandedStacks, setExpandedStacks] = useState<Set<string>>(new Set());
 
   const openModal = (project: Project) => {
     setSelectedProject(project);
@@ -51,6 +72,18 @@ export default function Projects() {
   };
 
   const closeModal = () => setIsModalOpen(false);
+
+  const toggleStack = (title: string) => {
+    setExpandedStacks((prev) => {
+      const next = new Set(prev);
+      if (next.has(title)) {
+        next.delete(title);
+      } else {
+        next.add(title);
+      }
+      return next;
+    });
+  };
 
   return (
     <section id="projects" ref={ref} className={sectionWrapperStyles}>
@@ -101,32 +134,64 @@ export default function Projects() {
               )}
 
               <div className={bodyStyles}>
-                <div className={metaRowStyles}>
-                  <span className={yearStyles}>{project.year}</span>
-                  <span className={cx(statusStyles, project.statusActive ? statusActiveStyles : undefined)}>
-                    {project.status}
-                  </span>
+                <div className={titleRowStyles}>
+                  <h3 className={titleStyles}>{project.title}</h3>
+                  <span className={periodStatusStyles}>{project.activePeriod}</span>
                 </div>
 
-                <h3 className={titleStyles}>{project.title}</h3>
                 <p className={descriptionStyles}>{project.description}</p>
 
                 {project.highlight && (
                   <div className={highlightStyles}>
-                    <p className={highlightTextStyles}>{project.highlight}</p>
+                    <p className={highlightTextStyles}>
+                      {renderHighlight(project.highlight, project.highlightMetric)}
+                    </p>
                   </div>
                 )}
 
                 <div className={tagRowStyles}>
-                  {project.stack.map((tag) => (
-                    <span key={tag} className={tagStyles}>
-                      {tag}
-                    </span>
-                  ))}
+                  {(() => {
+                    const isExpanded = expandedStacks.has(project.title);
+                    const hasOverflow = project.stack.length > MAX_VISIBLE_TAGS;
+                    const visibleStack = isExpanded ? project.stack : project.stack.slice(0, MAX_VISIBLE_TAGS);
+
+                    return (
+                      <>
+                        {visibleStack.map((tag, index) => (
+                          <span key={tag} className={cx(tagStyles, index === 0 ? tagPrimaryStyles : undefined)}>
+                            {tag}
+                          </span>
+                        ))}
+                        {hasOverflow && (
+                          <button
+                            type="button"
+                            className={cx(tagStyles, tagOverflowStyles)}
+                            aria-expanded={isExpanded}
+                            aria-label={isExpanded ? `${project.title} 스택 접기` : `${project.title} 전체 스택 보기`}
+                            onClick={(event) => {
+                              event.stopPropagation();
+                              toggleStack(project.title);
+                            }}
+                          >
+                            {isExpanded ? "접기" : `+${project.stack.length - MAX_VISIBLE_TAGS}`}
+                          </button>
+                        )}
+                      </>
+                    );
+                  })()}
                 </div>
 
                 <div className={footerRowStyles}>
-                  <span className={footerLabelStyles}>{project.period}</span>
+                  <button
+                    type="button"
+                    className={detailLinkStyles}
+                    onClick={(event) => {
+                      event.stopPropagation();
+                      openModal(project);
+                    }}
+                  >
+                    자세히 보기 ›
+                  </button>
                   {project.links && (
                     <div className={footerActionsStyles}>
                       {project.links.map((link) => (
