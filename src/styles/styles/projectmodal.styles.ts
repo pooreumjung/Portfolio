@@ -77,7 +77,7 @@ export const sectionStyles = css({ marginBottom: "24px" });
 
 export const sectionHeadingStyles = css({
   margin: "0 0 10px",
-  color: "warm",
+  color: "accent2",
   fontSize: "15px",
   fontWeight: "800",
 });
@@ -100,7 +100,7 @@ export const inlineLinkStyles = css({
   color: "accentStrong",
   textDecoration: "underline",
   textUnderlineOffset: "2px",
-  _hover: { color: "warm" },
+  _hover: { color: "accent2" },
 });
 
 export const linksRowStyles = css({

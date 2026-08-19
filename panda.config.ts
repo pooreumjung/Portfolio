@@ -32,16 +32,18 @@ export default defineConfig({
       },
       tokens: {
         colors: {
-          // Mapped 1:1 from the site's original :root custom properties.
-          bg: { value: "#f8f6f4" },
+          // Cool gray/slate palette — swapped from the original warm-cream
+          // brand colors (brown accent, beige surfaces) for a cooler, more
+          // neutral portfolio look. Same token roles, new values.
+          bg: { value: "#f7f8fa" },
           surface: { value: "#ffffff" },
-          surfaceMuted: { value: "#efeae6" },
-          text: { value: "#181b1d" },
-          muted: { value: "#6d6864" },
-          line: { value: "#e5ded7" },
-          accent: { value: "#445266" },
-          accentStrong: { value: "#2c3644" },
-          warm: { value: "#8a5a44" },
+          surfaceMuted: { value: "#eef1f5" },
+          text: { value: "#14181f" },
+          muted: { value: "#64748b" },
+          line: { value: "#dde3ea" },
+          accent: { value: "#3b5169" },
+          accentStrong: { value: "#26313f" },
+          accent2: { value: "#4b6d8c" },
         },
         fonts: {
           sans: {

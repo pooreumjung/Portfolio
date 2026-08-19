@@ -57,7 +57,7 @@ const summaryStyles = css({
 const cubeDepth = "calc(50vw)";
 
 // Session-gated cube-flip intro, ported from the reference repo and
-// re-skinned with the site's own warm/light palette instead of the
+// re-skinned with the site's own cool/light palette instead of the
 // reference's dark blue/purple gradient.
 export default function PageLoader({ children }: PageLoaderProps) {
   const [phase, setPhase] = useState<"loading" | "turning" | "done" | "skip">("loading");

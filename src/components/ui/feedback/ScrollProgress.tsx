@@ -10,7 +10,7 @@ const progressBarStyles = css({
   left: 0,
   right: 0,
   height: "3px",
-  background: "linear-gradient(90deg, {colors.accent}, {colors.warm})",
+  background: "linear-gradient(90deg, {colors.accent}, {colors.accent2})",
   transformOrigin: "0%",
   zIndex: 1000,
 });

@@ -19,7 +19,7 @@ export const cardStyles = css({
 });
 
 export const issuerStyles = css({
-  color: "warm",
+  color: "accent2",
   fontSize: "xs",
   fontWeight: "800",
   textTransform: "uppercase",

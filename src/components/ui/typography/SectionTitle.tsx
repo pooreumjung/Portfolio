@@ -15,7 +15,7 @@ const containerStyles = css({
 
 const titleStyles = css({
   margin: 0,
-  color: "warm",
+  color: "accent2",
   fontSize: { base: "22px", md: "32px" },
   lineHeight: "1.14",
   fontWeight: "800",
@@ -28,7 +28,7 @@ const subtitleStyles = css({
 });
 
 // Matches the original site's `.section-heading > h2` treatment: left
-// aligned, warm-accent colored heading, used at the top of every section.
+// aligned, accent-colored heading, used at the top of every section.
 export default function SectionTitle({ title, subtitle, className }: SectionTitleProps) {
   return (
     <div className={cx(containerStyles, className)}>
