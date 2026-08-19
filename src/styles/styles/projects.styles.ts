@@ -99,7 +99,7 @@ export const highlightTextStyles = css({
   fontWeight: "700",
 });
 
-export const tagRowStyles = css({ display: "flex", flexWrap: "wrap", gap: "6px" });
+export const tagRowStyles = css({ display: "flex", flexWrap: "wrap", gap: "6px", marginTop: "auto" });
 
 export const tagStyles = css({
   display: "inline-flex",
@@ -118,7 +118,6 @@ export const footerRowStyles = css({
   alignItems: "center",
   justifyContent: "space-between",
   gap: "12px",
-  marginTop: "auto",
   paddingTop: "12px",
   borderTop: "1px solid {colors.line}",
 });
