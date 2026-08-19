@@ -18,6 +18,9 @@ import { useEffect, useState } from "react";
 
 const containerStyles = css({
   width: "100%",
+  maxWidth: "1280px",
+  margin: "0 auto",
+  padding: "0 32px",
   display: "flex",
   alignItems: "center",
   justifyContent: "space-between",

@@ -58,7 +58,7 @@ export const profileColumnStyles = css({
   flexDirection: "column",
   justifyContent: "space-between",
   gap: { base: "24px", md: "32px" },
-  marginTop: { base: 0, md: "40px" },
+  marginTop: { base: 0, md: "clamp(40px, 8vw, 135px)" },
 });
 
 export const subheadingStyles = css({

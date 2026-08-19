@@ -14,7 +14,6 @@ export const navigationRecipe = defineRecipe({
     gap: "24px",
     width: "100%",
     minHeight: "72px",
-    padding: "0 32px",
     backgroundColor: "bg",
     transition: "border-color {durations.normal}, box-shadow {durations.normal}",
     borderBottom: "1px solid transparent",
