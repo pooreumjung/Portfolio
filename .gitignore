@@ -1,2 +1,17 @@
 .DS_Store
 .claude/
+
+# Next.js / Node
+node_modules/
+.next/
+out/
+next-env.d.ts
+
+# Panda CSS codegen output
+styled-system/
+
+# TypeScript incremental build info
+*.tsbuildinfo
+
+# env
+.env*.local
