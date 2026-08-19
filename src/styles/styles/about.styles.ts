@@ -64,6 +64,7 @@ export const profileColumnStyles = css({
 export const subheadingStyles = css({
   color: "text",
   fontSize: { base: "20px", md: "25px" },
+  fontWeight: "800",
   margin: "0 0 10px",
 });
 
@@ -84,7 +85,13 @@ export const certCardStyles = css({
   backgroundColor: "rgba(255, 255, 255, 0.6)",
 });
 
-export const certTitleStyles = css({ margin: 0, color: "text", fontSize: "16px", lineHeight: "1.35" });
+export const certTitleStyles = css({
+  margin: 0,
+  color: "text",
+  fontSize: "16px",
+  fontWeight: "700",
+  lineHeight: "1.35",
+});
 export const certSubtitleStyles = css({ margin: "8px 0 0", color: "muted", fontSize: "13px" });
 export const certPeriodStyles = css({ flex: "0 0 auto", color: "accentStrong", fontSize: "xs", fontWeight: "800" });
 
@@ -106,6 +113,7 @@ export const skillCardTitleStyles = css({
   margin: "0 0 16px",
   color: "muted",
   fontSize: "sm",
+  fontWeight: "700",
   letterSpacing: "0.02em",
 });
 

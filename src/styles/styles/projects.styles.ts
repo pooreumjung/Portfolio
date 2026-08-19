@@ -15,6 +15,7 @@ export const gridStyles = css({
 export const cardStyles = css({
   display: "flex",
   flexDirection: "column",
+  height: "100%",
   overflow: "hidden",
   cursor: "pointer",
 });
@@ -61,7 +62,8 @@ export const bannerTitleStyles = css({
 });
 
 export const bodyStyles = css({
-  display: "grid",
+  display: "flex",
+  flexDirection: "column",
   flex: 1,
   gap: "12px",
   padding: "20px 22px",
@@ -116,7 +118,7 @@ export const footerRowStyles = css({
   alignItems: "center",
   justifyContent: "space-between",
   gap: "12px",
-  marginTop: "2px",
+  marginTop: "auto",
   paddingTop: "12px",
   borderTop: "1px solid {colors.line}",
 });

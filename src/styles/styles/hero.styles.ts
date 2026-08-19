@@ -21,6 +21,7 @@ export const titleStyles = css({
   margin: 0,
   fontSize: { base: "42px", md: "fontSizes.4xl" },
   lineHeight: "1.08",
+  fontWeight: "800",
   wordBreak: "keep-all",
 });
 
