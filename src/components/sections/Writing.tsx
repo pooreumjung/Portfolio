@@ -1,7 +1,8 @@
 "use client";
 
 import { useScrollAnimation } from "@hooks/index";
-import { WRITING_COPY, writings } from "@/constants/writing.constant";
+import { WRITING_COPY } from "@/constants/writing.constant";
+import type { WritingPost } from "@/types/writing";
 import { writingAnimations } from "@/styles/animations/writing.animations";
 import {
   allPostsLinkStyles,
@@ -10,6 +11,7 @@ import {
   cardTextStyles,
   cardTitleStyles,
   contentStyles,
+  emptyStateStyles,
   headingRowStyles,
   linkStyles,
   listStyles,
@@ -21,7 +23,15 @@ import {
 import { SectionTitle } from "@ui/typography";
 import { motion } from "framer-motion";
 
-export default function Writing() {
+interface WritingProps {
+  posts: WritingPost[];
+}
+
+// `posts` is fetched server-side from the Tistory RSS feed (see
+// src/lib/tistory.ts) and passed down through ClientHome — this component
+// stays a plain presentational client component with no data-fetching of
+// its own, so it just renders whatever it's given.
+export default function Writing({ posts }: WritingProps) {
   const { ref, inView } = useScrollAnimation({ threshold: 0.1 });
 
   return (
@@ -38,48 +48,54 @@ export default function Writing() {
         </a>
       </div>
 
-      <div className={listStyles}>
-        {writings.map((post, index) => (
-          <motion.article
-            key={post.href}
-            className={cardStyles}
-            initial={{ opacity: 0, y: 18 }}
-            animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 18 }}
-            transition={{
-              duration: writingAnimations.itemDuration,
-              delay: index * writingAnimations.itemStagger,
-              ease: writingAnimations.ease,
-            }}
-          >
-            <div className={metaStyles}>
-              <span>{post.date}</span>
-              <span>{post.category}</span>
-            </div>
-            <a
-              href={post.href}
-              target="_blank"
-              rel="noreferrer"
-              className={linkStyles}
-              aria-label={`${post.title} 글 보기`}
+      {posts.length === 0 ? (
+        <p className={emptyStateStyles}>
+          최근 글을 불러오지 못했어요. 블로그에서 직접 확인해주세요.
+        </p>
+      ) : (
+        <div className={listStyles}>
+          {posts.map((post, index) => (
+            <motion.article
+              key={post.href}
+              className={cardStyles}
+              initial={{ opacity: 0, y: 18 }}
+              animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 18 }}
+              transition={{
+                duration: writingAnimations.itemDuration,
+                delay: index * writingAnimations.itemStagger,
+                ease: writingAnimations.ease,
+              }}
             >
-              <div className={contentStyles}>
-                <h3 className={cardTitleStyles}>{post.title}</h3>
-                <p className={cardTextStyles}>{post.text}</p>
-                <div className={tagRowStyles}>
-                  {post.tags.map((tag) => (
-                    <span key={tag} className={tagStyles}>
-                      {tag}
-                    </span>
-                  ))}
-                </div>
+              <div className={metaStyles}>
+                <span>{post.date}</span>
+                <span>{post.category}</span>
               </div>
-              <span className={arrowStyles} data-arrow aria-hidden="true">
-                ↗
-              </span>
-            </a>
-          </motion.article>
-        ))}
-      </div>
+              <a
+                href={post.href}
+                target="_blank"
+                rel="noreferrer"
+                className={linkStyles}
+                aria-label={`${post.title} 글 보기`}
+              >
+                <div className={contentStyles}>
+                  <h3 className={cardTitleStyles}>{post.title}</h3>
+                  <p className={cardTextStyles}>{post.text}</p>
+                  <div className={tagRowStyles}>
+                    {post.tags.map((tag) => (
+                      <span key={tag} className={tagStyles}>
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                <span className={arrowStyles} data-arrow aria-hidden="true">
+                  ↗
+                </span>
+              </a>
+            </motion.article>
+          ))}
+        </div>
+      )}
     </section>
   );
 }

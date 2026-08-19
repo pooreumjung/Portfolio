@@ -11,6 +11,7 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "fast-xml-parser": "^5.11.0",
     "framer-motion": "^12.23.5",
     "next": "15.5.9",
     "react": "19.2.3",

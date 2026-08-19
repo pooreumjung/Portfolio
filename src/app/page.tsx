@@ -1,5 +1,8 @@
 import ClientHome from "./ClientHome";
+import { fetchTistoryPosts } from "@/lib/tistory";
 
-export default function Home() {
-  return <ClientHome />;
+export default async function Home() {
+  const writings = await fetchTistoryPosts();
+
+  return <ClientHome writings={writings} />;
 }

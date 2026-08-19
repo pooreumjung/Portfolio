@@ -2,6 +2,7 @@
 
 import { useSmoothScroll } from "@hooks/index";
 import Navigation from "@layout/Navigation";
+import type { WritingPost } from "@/types/writing";
 import { PageLoader, ScrollProgress } from "@ui/index";
 import dynamic from "next/dynamic";
 
@@ -14,7 +15,11 @@ const Writing = dynamic(() => import("@sections/Writing"), { loading: () => null
 const Contact = dynamic(() => import("@sections/Contact"), { loading: () => null });
 const Footer = dynamic(() => import("@layout/Footer"), { loading: () => null });
 
-export default function ClientHome() {
+interface ClientHomeProps {
+  writings: WritingPost[];
+}
+
+export default function ClientHome({ writings }: ClientHomeProps) {
   useSmoothScroll();
 
   return (
@@ -27,7 +32,7 @@ export default function ClientHome() {
         <Projects />
         <Experience />
         <Awards />
-        <Writing />
+        <Writing posts={writings} />
         <Contact />
       </main>
       <Footer />

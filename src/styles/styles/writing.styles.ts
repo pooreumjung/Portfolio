@@ -91,6 +91,13 @@ export const tagStyles = css({
   fontWeight: "700",
 });
 
+export const emptyStateStyles = css({
+  color: "muted",
+  fontSize: "base",
+  padding: "24px 0",
+  borderTop: "1px solid {colors.line}",
+});
+
 export const arrowStyles = css({
   position: "absolute",
   top: 0,
