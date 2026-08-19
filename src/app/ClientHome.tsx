@@ -24,8 +24,8 @@ export default function ClientHome() {
       <main>
         <Hero />
         <About />
-        <Experience />
         <Projects />
+        <Experience />
         <Awards />
         <Writing />
         <Contact />

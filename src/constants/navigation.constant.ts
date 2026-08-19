@@ -6,8 +6,8 @@ export const NAVIGATION_CONFIG = {
 
 export const navItems: NavItem[] = [
   { label: "About", href: "#about" },
-  { label: "Experience", href: "#experience" },
   { label: "Projects", href: "#projects" },
+  { label: "Experience", href: "#experience" },
   { label: "Awards", href: "#awards" },
   { label: "Writing", href: "#writing" },
   { label: "Contact", href: "#contact" },
