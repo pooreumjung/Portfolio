@@ -91,6 +91,10 @@ export const projects: Project[] = [
         href: "https://pooreumjung.tistory.com/609",
       },
       {
+        text: "산 상세 조회 전용 read model과 성능 리포트 테스트를 도입해 쿼리 7개→2개, 평균 응답 29.5ms→4.6ms 개선",
+        href: "https://pooreumjung.tistory.com/610",
+      },
+      {
         text: "커버리지 보강 및 JaCoCo 기반 테스트 커버리지 90% CI 게이트 도입",
         href: "https://pooreumjung.tistory.com/607",
       },
@@ -119,9 +123,6 @@ export const projects: Project[] = [
       },
       {
         text: "BaseEntity, 글로벌 응답/예외 구조, Flyway 등 초기 아키텍처 설계"
-      },
-      {
-        text: "GitHub Flow 기반 브랜치 전략, PR 템플릿·코드 리뷰 컨벤션 등 협업 규칙 수립",
       },
     ],
     wrapup:
