@@ -19,15 +19,10 @@ export function BlogIcon({ size = 20 }: IconProps) {
       viewBox="0 0 24 24"
       width={size}
       height={size}
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={1.8}
-      strokeLinecap="round"
-      strokeLinejoin="round"
+      fill="currentColor"
       aria-hidden="true"
     >
-      <path d="M12 20h9" />
-      <path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z" />
+      <path d="M4.8 3.8h14.4c.55 0 1 .45 1 1v14.4c0 .55-.45 1-1 1H4.8c-.55 0-1-.45-1-1V4.8c0-.55.45-1 1-1Zm3.05 4.35v2.3h2.9v6.55h2.5v-6.55h2.9v-2.3h-8.3Z" />
     </svg>
   );
 }

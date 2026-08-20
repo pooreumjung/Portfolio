@@ -4,7 +4,7 @@ export const profile: Profile = {
   name: "정푸름",
   summary: "팀원들과 함께 성장해 나가는 백엔드 개발자 정푸름입니다.",
   links: [
-    { label: "GitHub", icon: "github", href: "https://github.com/pooreumjung", primary: true },
+    { label: "GitHub", icon: "github", href: "https://github.com/pooreumjung" },
     { label: "Blog", icon: "blog", href: "https://pooreumjung.tistory.com/" },
     {
       label: "LinkedIn",
@@ -14,7 +14,7 @@ export const profile: Profile = {
     { label: "Email", icon: "email", href: "mailto:pooreumjung02@naver.com" },
   ],
   contacts: [
-    { label: "GitHub", icon: "github", href: "https://github.com/pooreumjung", primary: true },
+    { label: "GitHub", icon: "github", href: "https://github.com/pooreumjung" },
     { label: "Email", icon: "email", href: "mailto:pooreumjung02@naver.com" },
     {
       label: "LinkedIn",
