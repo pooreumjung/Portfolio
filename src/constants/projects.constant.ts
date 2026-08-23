@@ -60,7 +60,7 @@ export const projects: Project[] = [
       "Spring Boot",
       "Spring Security",
       "JPA",
-      "MySQL",
+      "PostgreSQL",
       "Flyway",
       "JWT",
       "Kakao OAuth",
