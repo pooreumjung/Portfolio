@@ -25,9 +25,9 @@ export const listStyles = css({
 
 export const timelineRailStyles = css({
   position: "absolute",
-  top: "3px",
-  bottom: "3px",
-  left: { base: "44px", md: "64px" },
+  top: "16px",
+  bottom: "16px",
+  left: { base: "53px", md: "73px" },
   width: "2px",
   borderRadius: "999px",
   backgroundColor: "rgba(68, 82, 102, 0.18)",
@@ -38,12 +38,11 @@ export const itemStyles = css({ position: "relative" });
 export const itemDotStyles = css({
   position: "absolute",
   top: "9px",
-  left: { base: "-42px", md: "-58px" },
+  left: "-33px",
   width: "15px",
   height: "15px",
   borderRadius: "999px",
   backgroundColor: "accent",
-  boxShadow: "0 0 0 5px {colors.bg}",
 });
 
 export const itemHeadStyles = css({
