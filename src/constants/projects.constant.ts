@@ -105,19 +105,14 @@ export const projects: Project[] = [
       {
         text: "iOS 푸시 미수신 이슈를 연쇄적으로 추적·해결, FCM data-only 메시지 전환으로 포그라운드 알림 지연 해결",
         href: "https://pooreumjung.tistory.com/578",
-      },
-      {
-        text: "소셜 로그인 구현부터 탈퇴 유저 JWT 우회 방지까지 인증/인가 및 보안 강화",        
-      },
-      {
-        text: "마이페이지, 온보딩, 회원탈퇴, 프로필 등 유저 도메인 개발",        
       },      
       {
-        text: "신고/차단, 대댓글, 좋아요·이모지 반응 등 커뮤니티(자유게시판·세모피드) 기능 개발",        
+        text: "OAuth 로그인 트랜잭션 범위 최적화로 DB 커넥션 점유 시간 축소",
+        href: "https://pooreumjung.tistory.com/611",
       },      
       {
-        text: "중복 로직 통합, 트랜잭션 분리, 네이밍 통일 등 코드 품질 리팩토링",        
-      },      
+        text: "유저, 인증, 커뮤니티(자유게시판·세모피드), 등산 코스 추천 기능 개발",        
+      },            
       {
         text: "디스코드 에러 알림, Gemini/CodeRabbit 기반 AI 코드리뷰, Spring Boot 4.1 마이그레이션 스파이크 등 개발 생산성 툴링",        
       },

@@ -126,13 +126,6 @@ export const tagStyles = css({
   fontWeight: "700",
 });
 
-// Applied to just the first (most representative) stack tag so one thing in
-// the tag row has visual weight instead of every tag competing equally.
-export const tagPrimaryStyles = css({
-  backgroundColor: "accentStrong",
-  color: "#ffffff",
-});
-
 // The "+N" overflow chip — same footprint as a tag but visually recedes.
 // Rendered as a <button> (opens the detail modal, which lists every stack
 // tag) rather than plain text, so it's clear the rest aren't just hidden.

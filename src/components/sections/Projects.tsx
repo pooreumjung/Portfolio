@@ -24,7 +24,6 @@ import {
   periodStatusStyles,
   sectionWrapperStyles,
   tagOverflowStyles,
-  tagPrimaryStyles,
   tagRowStyles,
   tagStyles,
   titleRowStyles,
@@ -157,8 +156,8 @@ export default function Projects() {
 
                     return (
                       <>
-                        {visibleStack.map((tag, index) => (
-                          <span key={tag} className={cx(tagStyles, index === 0 ? tagPrimaryStyles : undefined)}>
+                        {visibleStack.map((tag) => (
+                          <span key={tag} className={tagStyles}>
                             {tag}
                           </span>
                         ))}
