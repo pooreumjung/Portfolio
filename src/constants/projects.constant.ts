@@ -104,12 +104,16 @@ export const projects: Project[] = [
       "초기 아키텍처 세팅부터 인증, 등산/커뮤니티 도메인, 푸시 알림 인프라, 리팩토링, 테스트 커버리지까지 폭넓게 담당했습니다.",
     contributionPoints: [
       {
-        text: "산 추천, 등산 기록, 라이브 액티비티 등 등산·트래킹 도메인 개발, Redis 배치 조회로 스케줄러 성능 21.7배 개선",
+        text: "Redis 배치 조회로 스케줄러 성능 21.7배 개선",
         href: "https://pooreumjung.tistory.com/609",
       },
       {
         text: "산 상세 조회 전용 read model과 성능 리포트 테스트를 도입해 쿼리 7개→2개, 평균 응답 29.5ms→4.6ms 개선",
         href: "https://pooreumjung.tistory.com/610",
+      },
+      {
+        text: "GPS 트래킹 좌표 저장을 JdbcTemplate.batchUpdate()로 전환, 대량 삽입 성능 최대 98% 개선 (3.2초 → 167ms)",
+        href: "https://pooreumjung.tistory.com/614",
       },
       {
         text: "커버리지 보강 및 JaCoCo 기반 테스트 커버리지 90% CI 게이트 도입",
@@ -128,8 +132,8 @@ export const projects: Project[] = [
         href: "https://pooreumjung.tistory.com/611",
       },      
       {
-        text: "유저, 인증, 커뮤니티(자유게시판·세모피드), 등산 코스 추천 기능 개발",        
-      },            
+        text: "회원·커뮤니티 관리,  산·코스 추천, 기록 및 라이브 액티비티 기능 개발.",
+      },
       {
         text: "디스코드 에러 알림, Gemini/CodeRabbit 기반 AI 코드리뷰, Spring Boot 4.1 마이그레이션 스파이크 등 개발 생산성 툴링",        
       },
