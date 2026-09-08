@@ -5,9 +5,9 @@ export const projects: Project[] = [
     title: "EAT-SSU",
     period: "Backend · Spring Boot",
     activePeriod: "2026.01 - 운영 중",
-    description: "누적 다운로드 수 6,000+, 숭실대학교 학식 서비스",
-    highlight: "Gradle 중복 빌드 제거로 CI 빌드 시간 50% 단축",
-    highlightMetric: "50%",
+    description: "숭실대학교 학식 서비스",
+    highlight: "누적 다운로드 수 6,000+",
+    highlightMetric: "6,000+",
     image: "/eat-ssu-v2.png",
     imageFit: "cover",
     links: [{ label: "GitHub", href: "https://github.com/EAT-SSU/Server" }],
@@ -24,6 +24,9 @@ export const projects: Project[] = [
       "CloudWatch",
       "Actuator",
       "Prometheus",
+      "Grafana Cloud",
+      "Alloy",
+      "Loki",
       "Slack API",
       "OAuth",
     ],
@@ -35,28 +38,29 @@ export const projects: Project[] = [
       "제휴 매장 할인 혜택 안내 (카카오맵·네이버지도 연동)",
       "식당 위치·영업시간 정보 제공",
     ],
-    contribution: "숭실대 학식 서비스 서버 유지보수를 담당하며 운영 안정성을 책임졌습니다.",
+    contribution: "숭실대 학식 서비스의 배포 안정성, 장애 대응, 운영 보안을 개선했습니다.",
     contributionPoints: [
-      { text: "AWS 프리티어 만료로 RDS 데이터를 다른 계정으로 이전", href: "https://pooreumjung.tistory.com/574" },
-      { text: "Gradle 중복 빌드 제거로 CI 빌드 시간 절반 단축", href: "https://pooreumjung.tistory.com/584" },
       {
         text: "배포 전 실제 DB로 Flyway 마이그레이션 리허설 실행해 운영 장애 사전 방지",
         href: "https://pooreumjung.tistory.com/608",
-      },      
+      },
+      {
+        text: "Slack 장애 알림에 Grafana Loki 로그 딥링크를 연결해 요청 단위 장애 추적 시간 단축",
+        href: "https://github.com/EAT-SSU/Server/pull/468",
+      },
+      { text: "Gradle 중복 빌드 제거로 CI 빌드 시간 절반 단축", href: "https://pooreumjung.tistory.com/584" },
       {
         text: "메모리 제한된 EC2 환경에 Grafana Cloud·Alloy 기반 모니터링 구축",
         href: "https://pooreumjung.tistory.com/587",
-      },      
-      { text: "PR 시점에 테스트를 자동 실행하는 CI 워크플로우 신설", href: "https://pooreumjung.tistory.com/588" },
-      {
-        text: "배포 스크립트를 포트 기반 컨테이너 관리로 개선해 운영 안정성 확보",
-        href: "https://pooreumjung.tistory.com/585",
       },
-      { text: "로그인 성공/실패 지표 Micrometer 카운터 추가" },
-      { text: "운영 중인 DB에 Flyway 도입 및 베이스라인 적용" },
-      { text: "빌드/배포 job 분리로 CI/CD 파이프라인 개선" },      
-      { text: "예외 로직 분리, Swagger 문서 분리 등 패키지 구조 리팩토링" },
-      { text: "NPE, Flyway 마이그레이션 누락 등 운영 중 발생한 버그 수정" },
+      {
+        text: "Swagger Basic Auth와 인증 응답 로그 마스킹으로 운영 환경의 API 문서·민감 정보 보호",
+        href: "https://github.com/EAT-SSU/Server/pull/472",
+      },
+      {
+        text: "테스트 통과 후에만 배포되도록 CI/CD를 분리하고 JaCoCo 리포트 기반 품질 확인 체계 구축",
+        href: "https://github.com/EAT-SSU/Server/pull/419",
+      },
     ],
     wrapup:
       "실사용자가 있는 운영 서비스다 보니, 새 기능을 추가하는 것보다 이미 동작하는 걸 깨뜨리지 않는 게 더 중요하다는 걸 체감했습니다. 문제가 생기면 감으로 짐작하기보다 지표부터 확인하고 원인을 좁혀가는 습관이 생겼고, 작은 변경 하나에도 운영에 미칠 영향을 먼저 생각하게 됐습니다.",
@@ -126,19 +130,6 @@ export const projects: Project[] = [
       {
         text: "iOS 푸시 미수신 이슈를 연쇄적으로 추적·해결, FCM data-only 메시지 전환으로 포그라운드 알림 지연 해결",
         href: "https://pooreumjung.tistory.com/578",
-      },      
-      {
-        text: "OAuth 로그인 트랜잭션 범위 최적화로 DB 커넥션 점유 시간 축소",
-        href: "https://pooreumjung.tistory.com/611",
-      },      
-      {
-        text: "회원·커뮤니티 관리,  산·코스 추천, 기록 및 라이브 액티비티 기능 개발.",
-      },
-      {
-        text: "디스코드 에러 알림, Gemini/CodeRabbit 기반 AI 코드리뷰, Spring Boot 4.1 마이그레이션 스파이크 등 개발 생산성 툴링",        
-      },
-      {
-        text: "BaseEntity, 글로벌 응답/예외 구조, Flyway 등 초기 아키텍처 설계"
       },
     ],
     wrapup:
