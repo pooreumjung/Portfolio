@@ -15,6 +15,7 @@ export const ABOUT_COPY = {
 } as const;
 
 export const certifications: Certification[] = [
+  { title: "TOEIC Speaking IH", subtitle: "Test of English for International Communication Speaking", period: "2026.09" },
   { title: "정보처리기사", subtitle: "Engineer Information Processing", period: "2026.06" },
   { title: "TOPCIT Level 3", subtitle: "Test Of Practical Competency in ICT", period: "2026.06" },
   { title: "SQLD", subtitle: "SQL Developer", period: "2026.03" },
