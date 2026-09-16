@@ -19,7 +19,7 @@ export const certifications: Certification[] = [
   { title: "정보처리기사", subtitle: "Engineer Information Processing", period: "2026.06" },
   { title: "TOPCIT Level 3", subtitle: "Test Of Practical Competency in ICT", period: "2026.06" },
   { title: "SQLD", subtitle: "SQL Developer", period: "2026.03" },
-  { title: "ADsP", subtitle: "Advanced Data Analytics Semi-Professional", period: "2026.02" },
+  { title: "ADsP", subtitle: "Advanced Data Analytics Semi-Professional", period: "2026.03" },
 ];
 
 export const skillGroups: SkillGroup[] = [
