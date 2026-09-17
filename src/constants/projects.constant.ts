@@ -6,7 +6,7 @@ export const projects: Project[] = [
     period: "Backend · Spring Boot",
     activePeriod: "2026.01 - 운영 중",
     description: "숭실대학교 학식 서비스",
-    highlight: "누적 다운로드 수 6,000+",
+    highlight: "누적 다운로드 수 6,000+, Peak WAU 2190",
     highlightMetric: "6,000+",
     image: "/eat-ssu-v2.png",
     imageFit: "cover",
