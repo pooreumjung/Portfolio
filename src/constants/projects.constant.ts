@@ -41,14 +41,14 @@ export const projects: Project[] = [
     contribution: "숭실대 학식 서비스의 배포 안정성, 장애 대응, 운영 보안을 개선했습니다.",
     contributionPoints: [
       {
-        text: "배포 전 실제 DB로 Flyway 마이그레이션 리허설 실행해 운영 장애 사전 방지",
+        text: "배포 전 운영 DB 덤프로 Flyway 마이그레이션을 리허설해 실패를 배포 전에 차단",
         href: "https://pooreumjung.tistory.com/608",
       },
       {
-        text: "Slack 장애 알림에 Grafana Loki 로그 딥링크를 연결해 요청 단위 장애 추적 시간 단축",
-        href: "https://github.com/EAT-SSU/Server/pull/468",
+        text: "장애 알림을 비동기화해 에러 응답 지연 1.7초를 없애고, requestId 기반 Loki 로그 딥링크로 요청 단위 장애 추적",
+        href: "https://pooreumjung.tistory.com/619",
       },
-      { text: "Gradle 중복 빌드 제거로 CI 빌드 시간 절반 단축", href: "https://pooreumjung.tistory.com/584" },
+      { text: "중복 빌드 제거로 CI 빌드 시간 약 50% 단축, Docker 이미지 약 200MB 감소", href: "https://pooreumjung.tistory.com/584" },
       {
         text: "메모리 제한된 EC2 환경에 Grafana Cloud·Alloy 기반 모니터링 구축",
         href: "https://pooreumjung.tistory.com/587",
@@ -108,7 +108,7 @@ export const projects: Project[] = [
       "초기 아키텍처 세팅부터 인증, 등산/커뮤니티 도메인, 푸시 알림 인프라, 리팩토링, 테스트 커버리지까지 폭넓게 담당했습니다.",
     contributionPoints: [
       {
-        text: "Redis 배치 조회로 스케줄러 성능 21.7배 개선",
+        text: "세션 만료 스케줄러의 Redis 개별 GET을 MGET 1회로 바꿔 조회 21.7배 개선",
         href: "https://pooreumjung.tistory.com/609",
       },
       {
@@ -116,7 +116,7 @@ export const projects: Project[] = [
         href: "https://pooreumjung.tistory.com/610",
       },
       {
-        text: "GPS 트래킹 좌표 저장을 JdbcTemplate.batchUpdate()로 전환, 대량 삽입 성능 최대 98% 개선 (3.2초 → 167ms)",
+        text: "GPS 좌표 저장을 JdbcTemplate.batchUpdate()로 전환해 100건 기준 98.3%, 10,000건 기준 3.2초 → 168ms로 단축",
         href: "https://pooreumjung.tistory.com/614",
       },
       {
@@ -124,8 +124,7 @@ export const projects: Project[] = [
         href: "https://pooreumjung.tistory.com/607",
       },
       {
-        text: "Spring 순환 참조로 인한 배포 장애 해결",
-        href: "https://pooreumjung.tistory.com/577",
+        text: "조회수 lost update는 벌크 UPDATE로, rate limit의 영구 429는 Redis Lua 스크립트로 원자화해 동시성 문제 해결",
       },
       {
         text: "iOS 푸시 미수신 이슈를 연쇄적으로 추적·해결, FCM data-only 메시지 전환으로 포그라운드 알림 지연 해결",
@@ -133,7 +132,7 @@ export const projects: Project[] = [
       },
     ],
     wrapup:
-      "여러 도메인을 넘나들며 개발하다 보니 구조와 네이밍을 일관되게 지키는 게 왜 중요한지 체감했고, Gemini·CodeRabbit 같은 AI 코드리뷰 도구를 도입해 리뷰 병목을 줄이는 시도도 해봤습니다. 그 결과 KUSITMS 33기 밋업데이에서 최우수상을 수상했습니다.",
+      "여러 도메인을 넘나들며 개발하다 보니 구조와 네이밍을 일관되게 지키는 게 왜 중요한지 체감했고, Gemini·CodeRabbit 같은 AI 코드리뷰 도구를 도입해 리뷰 병목을 줄이는 시도도 해봤습니다. 프로젝트는 KUSITMS 33기 밋업데이에서 최우수상을 받았습니다.",
   },
   {
     title: "Areumdap",
@@ -154,8 +153,6 @@ export const projects: Project[] = [
       "Redis",
       "JWT",
       "OAuth",
-      "Spring AI",
-      "OpenAI API",
       "AWS SQS",
       "FCM",
       "Spring Mail",
@@ -180,11 +177,12 @@ export const projects: Project[] = [
         text: "백엔드 파트 리더로서 Git Flow 기반 브랜치 전략, 코드 리뷰 프로세스, API 명세서, 프로젝트 구조 등을 정의해 협업 기준 수립",
       },
       {
-        text: "이메일·소셜(카카오)·네이버 로그인을 반복적으로 구현하고 안정화 (로그인 방식 변경, JWT 예외 응답 커스터마이징, 버그 수정 등)",
+        text: "로그인 방식 변경·JWT 예외 응답 커스터마이징·버그 수정으로 이메일·카카오·네이버 로그인 구현 및 안정화",
       },
       {
-        text: "이메일 인증코드 발송을 SQS 기반 비동기 처리로 전환해 서버 부하 분산",        
+        text: "이메일 인증 발송을 SQS로 비동기화하고, 커밋 후 발행·messageId 중복 처리·반복 실패 시 DLQ로 메시지 처리 흐름 구성",        
       },
+      { text: "데모데이까지 약 1달 반 일정에서 API 개발을 3~4일 앞당기고, 백엔드도 QA에 합류해 QA 3차까지 진행" },
       { text: "프로젝트 환경설정부터 Blue-Green 배포, main 브랜치 전환까지 배포 파이프라인 구축" },
       { text: "온보딩 저장, 유저 프로필, 캐릭터 성장 히스토리 등 유저·캐릭터 도메인 개발" },
       { text: "운영서버 디스코드 알림 연동, Device Token 로직 리팩토링·최적화" },

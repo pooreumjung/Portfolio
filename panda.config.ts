@@ -42,7 +42,8 @@ export default defineConfig({
           line: { value: "#d9e4ff" },
           accent: { value: "#2563eb" },
           accentStrong: { value: "#1e3a8a" },
-          accent2: { value: "#4d7c0f" },
+          // Was olive green; navy matches the PDF portfolio and the cobalt palette.
+          accent2: { value: "#1e3a8a" },
         },
         fonts: {
           sans: {
