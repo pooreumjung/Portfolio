@@ -35,10 +35,10 @@ export const experiences: ExperienceItem[] = [
   },
   {
     period: "2025.09 ~ 2026.02",
-    roles: ["Spring Boot Senior", "Backend Lead"],
+    roles: ["Spring Boot Senior"],
     title: "University Makeus Challenge (UMC) 9th",
     links: [{ label: "Areumdap Backend", href: "https://github.com/AreumDap/Areumdap-backend" }],
-    points: ["Spring Boot 스터디 리드(Senior)", "Areumdap 프로젝트 백엔드 리드 (백엔드 5명)"],
+    points: ["Spring Boot 스터디 리드", "Areumdap 프로젝트 백엔드 리드 (백엔드 5명)"],
   },
   {
     period: "2025.09 ~ 2026.01",

@@ -17,8 +17,8 @@ export const featuredItemStyles = css({ gridColumn: "1 / -1" });
 export const cardStyles = css({
   height: "100%",
   padding: "24px 26px",
-  display: "grid",
-  alignContent: "start",
+  display: "flex",
+  flexDirection: "column",
   gap: "10px",
 });
 
@@ -28,7 +28,8 @@ export const metaStyles = css({ color: "accent", fontSize: "sm", fontWeight: "70
 
 export const descriptionStyles = css({ margin: 0, color: "muted", fontSize: "base", lineHeight: "1.7" });
 
-export const tagRowStyles = css({ display: "flex", flexWrap: "wrap", gap: "6px", marginTop: "4px" });
+// marginTop auto pins tags to the card bottom so rows line up across cards
+export const tagRowStyles = css({ display: "flex", flexWrap: "wrap", gap: "6px", marginTop: "auto", paddingTop: "4px" });
 
 export const tagStyles = css({
   padding: "4px 10px",

@@ -19,7 +19,7 @@ export const moreProjects: MoreProject[] = [
     meta: "2026.07 – 08 · 백엔드 단독 개발",
     description:
       "관광·지도 API를 조합한 지역·관심사 기반 방문 코스 생성. 외부 호출과 DB 트랜잭션 분리, Apple·Google OAuth(코드 교환·JWKS 검증) 구현, 테스트 클래스 83개 작성",
-    tags: ["Java 21", "Spring Boot", "MySQL", "Redis", "Flyway", "Docker"],
+    tags: ["Spring Boot", "MySQL", "Redis", "Flyway"],
   },
   {
     title: "Ongi (온기)",
