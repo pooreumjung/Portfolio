@@ -53,6 +53,8 @@ export const introStyles = css({
   "& + &": { marginTop: "14px" },
 });
 
+export const introEmphasisStyles = css({ color: "accentStrong", fontWeight: "700" });
+
 export const profileColumnStyles = css({
   display: "flex",
   flexDirection: "column",

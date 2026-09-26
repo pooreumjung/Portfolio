@@ -64,12 +64,16 @@ export default function PageLoader({ children }: PageLoaderProps) {
   const [rotation, setRotation] = useState(0);
 
   useEffect(() => {
-    if (typeof window !== "undefined" && sessionStorage.getItem(VISITED_KEY)) {
+    if (
+      typeof window !== "undefined" &&
+      (sessionStorage.getItem(VISITED_KEY) || window.matchMedia("(prefers-reduced-motion: reduce)").matches)
+    ) {
       setPhase("skip");
       return;
     }
 
-    const turnTimer = setTimeout(() => setPhase("turning"), 1400);
+    // Kept short: the intro blocks the page, and recruiters skim.
+    const turnTimer = setTimeout(() => setPhase("turning"), 500);
     return () => clearTimeout(turnTimer);
   }, []);
 
@@ -77,7 +81,7 @@ export default function PageLoader({ children }: PageLoaderProps) {
     if (phase !== "turning") return;
 
     let start: number | null = null;
-    const duration = 1000;
+    const duration = 600;
     let frame: number;
 
     const animate = (timestamp: number) => {

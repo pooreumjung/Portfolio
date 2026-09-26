@@ -15,6 +15,7 @@ export const experiences: ExperienceItem[] = [
     points: [
       "정기 세션 커리큘럼 기획",
       "LG전자, 버티 등 기업 산학협력 프로젝트 기획 총괄",
+      "네트워킹 세션 좌석 배치 엔진(CP-SAT) 개발, 수작업 1시간 → 5분 이내",
     ],
   },
   {

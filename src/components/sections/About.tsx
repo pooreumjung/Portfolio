@@ -9,6 +9,7 @@ import {
   certPeriodStyles,
   certSubtitleStyles,
   certTitleStyles,
+  introEmphasisStyles,
   introStyles,
   layoutStyles,
   nameStyles,
@@ -50,7 +51,16 @@ export default function About() {
           </div>
           {ABOUT_COPY.intro.map((paragraph) => (
             <p key={paragraph} className={introStyles}>
-              {paragraph}
+              {/* **구절** in the copy is rendered as an emphasized span */}
+              {paragraph.split(/\*\*(.+?)\*\*/).map((part, i) =>
+                i % 2 ? (
+                  <strong key={i} className={introEmphasisStyles}>
+                    {part}
+                  </strong>
+                ) : (
+                  part
+                ),
+              )}
             </p>
           ))}
         </motion.div>
