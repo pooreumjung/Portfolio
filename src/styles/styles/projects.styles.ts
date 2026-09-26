@@ -181,9 +181,9 @@ export const detailLinkStyles = css({
 // Gradient fallback banners for projects without an `image` — mirrors the
 // original site's `.tone-1`..`.tone-5` rotation, cycling every 5 cards.
 export const toneGradients = [
-  "linear-gradient(135deg, #3b5169, #26313f)",
-  "linear-gradient(135deg, #4b6d8c, #26313f)",
-  "linear-gradient(135deg, #26313f, #10161d)",
-  "linear-gradient(135deg, #3b5169, #4b6d8c)",
-  "linear-gradient(135deg, #26313f, #4b6d8c)",
+  "linear-gradient(135deg, #2563eb, #1e3a8a)",
+  "linear-gradient(135deg, #06b6d4, #2563eb)",
+  "linear-gradient(135deg, #7c3aed, #1e3a8a)",
+  "linear-gradient(135deg, #84cc16, #3f6212)",
+  "linear-gradient(135deg, #2563eb, #06b6d4)",
 ];

@@ -2,7 +2,7 @@ import type { Profile } from "@/types/hero";
 
 export const profile: Profile = {
   name: "정푸름",
-  summary: "팀원들과 함께 성장해 나가는 백엔드 개발자 정푸름입니다.",
+  summary: "문제의 본질을 끝까지 파고드는 백엔드 개발자 정푸름입니다.",
   links: [
     { label: "GitHub", icon: "github", href: "https://github.com/pooreumjung" },
     { label: "Blog", icon: "blog", href: "https://pooreumjung.tistory.com/" },

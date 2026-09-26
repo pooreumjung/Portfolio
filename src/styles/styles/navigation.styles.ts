@@ -11,7 +11,7 @@ export const navPillStyles = css({
   alignItems: "center",
   gap: "6px",
   padding: "6px",
-  border: "1px solid rgba(222, 222, 219, 0.86)",
+  border: "1px solid rgba(217, 228, 255, 0.92)",
   borderRadius: "999px",
   backgroundColor: "rgba(255, 255, 255, 0.72)",
 });

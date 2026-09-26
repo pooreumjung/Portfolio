@@ -30,7 +30,7 @@ export const timelineRailStyles = css({
   left: { base: "53px", md: "73px" },
   width: "2px",
   borderRadius: "999px",
-  backgroundColor: "rgba(68, 82, 102, 0.18)",
+  backgroundColor: "rgba(37, 99, 235, 0.2)",
 });
 
 export const itemStyles = css({ position: "relative" });
@@ -64,7 +64,7 @@ export const itemPeriodStyles = css({
   minHeight: "30px",
   padding: "0 12px",
   borderRadius: "999px",
-  backgroundColor: "rgba(68, 82, 102, 0.1)",
+  backgroundColor: "rgba(37, 99, 235, 0.1)",
   color: "accentStrong",
   fontSize: "xs",
   fontWeight: "800",
@@ -84,7 +84,7 @@ export const itemLinkStyles = css({
   fontSize: "13px",
   fontWeight: "800",
   transition: "border-color {durations.fast}, background-color {durations.fast}, color {durations.fast}",
-  _hover: { borderColor: "rgba(68, 82, 102, 0.2)", backgroundColor: "rgba(68, 82, 102, 0.08)", color: "accent" },
+  _hover: { borderColor: "rgba(37, 99, 235, 0.25)", backgroundColor: "rgba(37, 99, 235, 0.08)", color: "accent" },
 });
 
 export const itemListStyles = css({

@@ -33,21 +33,27 @@ export const experiences: ExperienceItem[] = [
   },
   {
     period: "2025.09 ~ 2026.02",
-    roles: ["Spring Boot Senior"],
+    roles: ["Spring Boot Senior", "Backend Lead"],
     title: "University Makeus Challenge (UMC) 9th",
     links: [{ label: "Areumdap Backend", href: "https://github.com/AreumDap/Areumdap-backend" }],
-    points: ["Areumdap 프로젝트 백엔드 개발 진행"],
+    points: ["Spring Boot 스터디 리드(Senior)", "Areumdap 프로젝트 백엔드 리드 (백엔드 5명)"],
   },
   {
-    period: "2024.10 ~ 2025.05",
+    period: "2025.09 ~ 2026.01",
     roles: ["Backend Developer"],
-    title: "Sigma Technology",
-    points: ["Spring Boot와 NestJS를 이용한 서비스 개발"],
+    title: "IT's TIME 8th",
+    points: ["ROOME 프로젝트 백엔드 개발 진행"],
   },
   {
     period: "2021.12 ~ 2022.11",
     roles: ["President"],
     title: "SSU CSE Student Council",
     points: ["학생회 조직 운영 및 학부 구성원 소통 총괄"],
+  },
+  {
+    period: "2021.03 ~ 2021.11",
+    roles: ["사무국원"],
+    title: "SSU CSE Student Council",
+    points: ["학생회 사무 및 감사 자료 관리"],
   },
 ];

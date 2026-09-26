@@ -6,7 +6,7 @@ export const projects: Project[] = [
     period: "Backend · Spring Boot",
     activePeriod: "2026.01 - 운영 중",
     description: "숭실대학교 학식 서비스",
-    highlight: "누적 다운로드 수 6,000+",
+    highlight: "누적 다운로드 수 6,000+, Peak WAU 2190",
     highlightMetric: "6,000+",
     image: "/eat-ssu-v2.png",
     imageFit: "cover",
@@ -140,8 +140,8 @@ export const projects: Project[] = [
     period: "UMC 9th · Backend",
     activePeriod: "2025.12 - 2026.02",
     description: "질문을 통해 나를 알아가는 자기이해 서비스",
-    highlight: "UMC 데모데이 77개 팀 중 2등 수상",
-    highlightMetric: "2등",
+    highlight: "UMC 데모데이 최우수상 (77개 팀 중 2위)",
+    highlightMetric: "최우수상",
     image: "/areumdap-v2.png",
     imageFit: "cover",
     links: [{ label: "GitHub", href: "https://github.com/AreumDap/Areumdap-backend" }],
@@ -177,7 +177,7 @@ export const projects: Project[] = [
     contribution: "UMC 9기 백엔드 파트 리드로 참여해 프로젝트 전반의 아키텍처와 개발을 이끌었습니다.",
     contributionPoints: [
       {
-        text: "백엔드 파트 리더로서 GitHub Flow 기반 브랜치 전략, 코드 리뷰 프로세스, API 명세서, 프로젝트 구조 등을 정의해 협업 기준 수립",
+        text: "백엔드 파트 리더로서 Git Flow 기반 브랜치 전략, 코드 리뷰 프로세스, API 명세서, 프로젝트 구조 등을 정의해 협업 기준 수립",
       },
       {
         text: "이메일·소셜(카카오)·네이버 로그인을 반복적으로 구현하고 안정화 (로그인 방식 변경, JWT 예외 응답 커스터마이징, 버그 수정 등)",
@@ -190,6 +190,6 @@ export const projects: Project[] = [
       { text: "운영서버 디스코드 알림 연동, Device Token 로직 리팩토링·최적화" },
     ],
     wrapup:
-      "Spring Boot Senior로 이메일/소셜/네이버 로그인을 반복 안정화하고 Blue-Green 배포 파이프라인을 구성했으며, UMC 데모데이 77개 팀 중 2등을 수상했습니다.",
+      "백엔드 리드로 이메일/소셜/네이버 로그인을 반복 안정화하고 Blue-Green 배포 파이프라인을 구성했으며, 팀은 UMC 데모데이에서 최우수상(77개 팀 중 2위)을 수상했습니다.",
   },
 ];

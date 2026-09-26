@@ -14,7 +14,7 @@ const socialIcons = {
 const profile = {
   name: "정푸름",
   summary:
-    "팀원들과 함께 성장해 나가는 백엔드 개발자 정푸름입니다.",
+    "문제의 본질을 끝까지 파고드는 백엔드 개발자 정푸름입니다.",
   links: [
     { label: "GitHub", icon: socialIcons.github, href: "https://github.com/pooreumjung", primary: true },
     { label: "Blog", icon: socialIcons.blog, href: "https://pooreumjung.tistory.com/" },

@@ -22,12 +22,12 @@ export const buttonRecipe = defineRecipe({
     transition: "transform {durations.fast}, outline-color {durations.fast}",
     _hover: {
       transform: "translateY(-1px)",
-      outline: "2px solid rgba(68, 82, 102, 0.2)",
+      outline: "2px solid rgba(37, 99, 235, 0.25)",
       outlineOffset: "2px",
     },
     _focusVisible: {
       transform: "translateY(-1px)",
-      outline: "2px solid rgba(68, 82, 102, 0.2)",
+      outline: "2px solid rgba(37, 99, 235, 0.25)",
       outlineOffset: "2px",
     },
     _disabled: {
