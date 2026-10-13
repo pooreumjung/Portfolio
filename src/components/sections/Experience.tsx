@@ -35,7 +35,7 @@ export default function Experience() {
 
         {experiences.map((experience, index) => (
           <motion.div
-            key={experience.title}
+            key={`${experience.title}-${experience.period}`}
             className={itemStyles}
             initial={{ opacity: 0, y: 18 }}
             animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 18 }}

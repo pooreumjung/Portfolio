@@ -10,9 +10,14 @@ export const ABOUT_COPY = {
   ],
   photo: "/profile.jpeg",
   photoAlt: "정푸름 프로필 사진",
+  educationTitle: "Education",
   certificationsTitle: "Certifications",
   skillsTitle: "Skills",
 } as const;
+
+export const education: Certification[] = [
+  { title: "숭실대학교 컴퓨터학부", subtitle: "2027.02 졸업예정 · 학점 3.99 / 4.5", period: "2021.03 ~ 2027.02" },
+];
 
 export const certifications: Certification[] = [
   { title: "TOEIC Speaking IH", subtitle: "Test of English for International Communication Speaking", period: "2026.09" },
@@ -23,8 +28,8 @@ export const certifications: Certification[] = [
 ];
 
 export const skillGroups: SkillGroup[] = [
-  { title: "Backend", items: ["Java", "Spring Boot", "JPA", "REST API", "JUnit5"] },
-  { title: "Database", items: ["MySQL", "PostgreSQL", "Redis", "Flyway"] },
-  { title: "Infrastructure", items: ["Docker", "AWS", "GitHub Actions", "Nginx"] },
-  { title: "Observability", items: ["Prometheus", "Grafana Cloud", "Micrometer", "Actuator"] },
+  { title: "Backend", items: ["Java", "Spring Boot", "JPA", "Spring Security", "REST API", "JUnit5"] },
+  { title: "Database", items: ["MySQL", "PostgreSQL", "PostGIS", "Redis", "Flyway"] },
+  { title: "Infrastructure", items: ["Docker", "Kubernetes", "ArgoCD", "AWS", "AWS SQS", "GitHub Actions", "Nginx"] },
+  { title: "Observability", items: ["Grafana Cloud", "Alloy", "Loki", "Micrometer", "Actuator"] },
 ];

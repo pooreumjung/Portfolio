@@ -1,7 +1,7 @@
 "use client";
 
 import { useScrollAnimation } from "@hooks/index";
-import { ABOUT_COPY, certifications, skillGroups } from "@/constants/about.constant";
+import { ABOUT_COPY, certifications, education, skillGroups } from "@/constants/about.constant";
 import { aboutAnimations } from "@/styles/animations/about.animations";
 import {
   certCardStyles,
@@ -72,20 +72,25 @@ export default function About() {
           variants={fadeUp}
           transition={{ delay: 0.1 }}
         >
-          <div>
-            <h3 className={subheadingStyles}>{ABOUT_COPY.certificationsTitle}</h3>
-            <div className={certGridStyles}>
-              {certifications.map((cert) => (
-                <div key={cert.title} className={certCardStyles}>
-                  <div>
-                    <h4 className={certTitleStyles}>{cert.title}</h4>
-                    <p className={certSubtitleStyles}>{cert.subtitle}</p>
+          {[
+            { title: ABOUT_COPY.educationTitle, items: education },
+            { title: ABOUT_COPY.certificationsTitle, items: certifications },
+          ].map((block) => (
+            <div key={block.title}>
+              <h3 className={subheadingStyles}>{block.title}</h3>
+              <div className={certGridStyles}>
+                {block.items.map((cert) => (
+                  <div key={cert.title} className={certCardStyles}>
+                    <div>
+                      <h4 className={certTitleStyles}>{cert.title}</h4>
+                      <p className={certSubtitleStyles}>{cert.subtitle}</p>
+                    </div>
+                    <span className={certPeriodStyles}>{cert.period}</span>
                   </div>
-                  <span className={certPeriodStyles}>{cert.period}</span>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
-          </div>
+          ))}
 
           <div>
             <h3 className={subheadingStyles}>{ABOUT_COPY.skillsTitle}</h3>

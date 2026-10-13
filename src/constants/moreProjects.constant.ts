@@ -7,11 +7,11 @@ export const MORE_PROJECTS_COPY = {
 // Periods follow actual development, not club cohort dates.
 export const moreProjects: MoreProject[] = [
   {
-    title: "좌석 배치 엔진",
+    title: "교육기획팀 운영 도구",
     meta: "KUSITMS 34기 · 교육기획팀장",
     description:
-      "네트워킹 세션 48명 좌석 배치 자동화 엔진. 같은 팀 회피·재회 최소화 등 조건 6가지를 CP-SAT 제약으로 모델링하고 그리디·seed 10개와 비교 검증. 수작업 약 1시간 → 5분 이내, 세션 내 재회 0쌍, 실제 세션 3회 사용",
-    tags: ["Python", "OR-Tools CP-SAT", "pytest", "Next.js"],
+      "세션마다 반복하던 운영 수작업을 줄인 도구 모음. 구글폼 응답을 실시간으로 읽어 응답률·미응답자·팀별 분포를 보여 주는 대시보드 6종과 운영 허브 구축, 기업 컨택 메일 자동화로 327건 발송 실패 0건. 팀원이 만든 좌석 배치 엔진을 허브에 통합",
+    tags: ["Next.js", "Google Sheets CSV", "Node.js", "Nodemailer", "Vercel"],
     featured: true,
   },
   {
@@ -52,6 +52,6 @@ export const moreProjects: MoreProject[] = [
     meta: "2025.03 – 06 · Backend Developer",
     description:
       "대학 축제 소개팅·티켓 서비스. PASS 본인인증 기반 사용자 식별, 예약·입장권·관리자 기능과 배포 자동화 구현",
-    tags: ["PASS 본인인증"],
+    tags: ["Java", "Spring Boot", "Swagger", "PASS 본인인증"],
   },
 ];

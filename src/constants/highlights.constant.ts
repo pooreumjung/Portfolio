@@ -51,11 +51,11 @@ export const highlights: Highlight[] = [
     project: "EAT-SSU",
   },
   {
-    value: "1시간 → 5분",
-    label: "CP-SAT 배치 엔진으로 48명 좌석 배치 자동화",
-    detail: "운영진의 수작업 시간 기준, 세션 내 재회 0쌍",
-    problem: "조건 6가지를 지키며 48명을 수작업 배치",
-    action: "그리디·seed 10개와 비교, 실제 세션 3회 사용",
+    value: "327건",
+    label: "기업 컨택 메일 발송 자동화, 실패 0건",
+    detail: "발송 작업 약 6시간 → 약 32분",
+    problem: "기업 300여 곳에 컨택 메일을 한 통씩 수작업 발송",
+    action: "dry-run 검토·일부 시험 발송 후 순차 발송, 결과 로그 기록",
     project: "KUSITMS 34기",
   },
 ];
