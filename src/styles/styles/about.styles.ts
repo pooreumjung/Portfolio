@@ -59,21 +59,21 @@ export const profileColumnStyles = css({
   display: "flex",
   flexDirection: "column",
   justifyContent: "space-between",
-  gap: { base: "24px", md: "32px" },
+  gap: "14px",
   marginTop: { base: 0, md: "clamp(40px, 8vw, 135px)" },
 });
 
 export const subheadingStyles = css({
   color: "text",
-  fontSize: { base: "20px", md: "25px" },
+  fontSize: { base: "18px", md: "20px" },
   fontWeight: "800",
-  margin: "0 0 10px",
+  margin: "0 0 6px",
 });
 
 export const certGridStyles = css({
   display: "grid",
   gridTemplateColumns: { base: "1fr", sm: "repeat(2, minmax(0, 1fr))" },
-  gap: "12px",
+  gap: "6px",
 });
 
 export const certCardStyles = css({
@@ -81,7 +81,7 @@ export const certCardStyles = css({
   alignItems: "flex-start",
   justifyContent: "space-between",
   gap: "14px",
-  padding: "14px 16px",
+  padding: "9px 14px",
   border: "1px solid {colors.line}",
   borderRadius: "12px",
   backgroundColor: "rgba(255, 255, 255, 0.6)",
@@ -90,42 +90,41 @@ export const certCardStyles = css({
 export const certTitleStyles = css({
   margin: 0,
   color: "text",
-  fontSize: "16px",
+  fontSize: "15px",
   fontWeight: "700",
   lineHeight: "1.35",
 });
-export const certSubtitleStyles = css({ margin: "8px 0 0", color: "muted", fontSize: "13px" });
+export const certSubtitleStyles = css({ margin: "3px 0 0", color: "muted", fontSize: "12.5px" });
 export const certPeriodStyles = css({ flex: "0 0 auto", color: "accentStrong", fontSize: "xs", fontWeight: "800" });
 
 export const skillGridStyles = css({
   display: "grid",
   gridTemplateColumns: { base: "1fr", md: "repeat(2, minmax(0, 1fr))" },
-  gap: "16px",
+  gap: "10px",
 });
 
 export const skillCardStyles = css({
-  minHeight: "136px",
-  padding: "21px",
+  padding: "12px 16px",
   border: "1px solid {colors.line}",
   borderRadius: "16px",
   backgroundColor: "rgba(255, 255, 255, 0.6)",
 });
 
 export const skillCardTitleStyles = css({
-  margin: "0 0 16px",
+  margin: "0 0 8px",
   color: "muted",
   fontSize: "sm",
   fontWeight: "700",
   letterSpacing: "0.02em",
 });
 
-export const skillTagRowStyles = css({ display: "flex", flexWrap: "wrap", gap: "8px" });
+export const skillTagRowStyles = css({ display: "flex", flexWrap: "wrap", gap: "6px" });
 
 export const skillTagStyles = css({
   display: "inline-flex",
   alignItems: "center",
-  minHeight: "30px",
-  padding: "0 11px",
+  minHeight: "24px",
+  padding: "0 10px",
   border: "1px solid {colors.line}",
   borderRadius: "8px",
   backgroundColor: "rgba(255, 255, 255, 0.74)",
