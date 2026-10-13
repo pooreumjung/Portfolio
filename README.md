@@ -1,12 +1,15 @@
 # Backend Portfolio
 
-백엔드 개발자 포트폴리오. Next.js 15 + TypeScript + Panda CSS + Framer Motion 기반.
+백엔드 개발자 정푸름의 포트폴리오 사이트. Next.js 15 + TypeScript + Panda CSS + Framer Motion 기반.
+
+배포 주소: https://www.pooreum.site
 
 ## 기술 스택
 
 - **Next.js 15** (App Router) + **React 19** + **TypeScript**
 - **Panda CSS** — 제로 런타임 CSS-in-JS, 토큰 기반 디자인 시스템, Recipe 시스템
 - **Framer Motion** — 스크롤 리빌 애니메이션, 모달, 로딩 인트로
+- **fast-xml-parser** — Tistory RSS를 읽어 Writing 섹션에 최근 글 표시 (1시간마다 갱신)
 - **pnpm**
 
 ## 프로젝트 구조
@@ -16,12 +19,13 @@ src/
 ├── app/                 # Next.js App Router (layout, page, ClientHome)
 ├── components/
 │   ├── layout/           # Navigation, Footer
-│   ├── sections/          # Hero, About, Experience, Projects, Awards, Writing, Contact
+│   ├── sections/          # Hero, Highlights, About, Projects(+ 더보기), Experience, Awards, Writing, Contact
 │   └── ui/                 # 공통 컴포넌트 (Button, Card, 모달, 아이콘 등)
 ├── constants/            # 섹션별 데이터 (.constant.ts) + UI 카피 (.copy.ts)
 ├── types/                 # 섹션별 타입 정의
 ├── hooks/                  # useScrollAnimation, useSmoothScroll 등
 ├── contexts/               # LoaderContext
+├── lib/                     # Tistory RSS 조회
 ├── utils/                   # 아이콘 매핑
 └── styles/
     ├── animations/          # 섹션별 framer-motion variants
@@ -31,8 +35,13 @@ src/
 
 ## 수정 방법
 
-`src/constants/*.constant.ts` 파일에서 본인 정보(경력, 프로젝트, 수상, 글 등)를 수정하세요.
+`src/constants/*.constant.ts` 파일에서 본인 정보(경력, 프로젝트, 수상 등)를 수정하세요.
 섹션별로 타입은 `src/types/`, 이미지는 `public/`에 있습니다.
+
+- 대표 프로젝트는 `projects.constant.ts`, "프로젝트 더보기"로 펼쳐지는 나머지 프로젝트는 `moreProjects.constant.ts`에 있습니다.
+- Writing 섹션은 Tistory RSS에서 자동으로 가져오므로 직접 수정하지 않습니다.
+- 섹션 순서는 `src/app/ClientHome.tsx`에서 정합니다.
+- 루트의 `*_Experience.md`는 프로젝트별 기여 정리 문서로, 사이트 문구와 수치의 근거입니다.
 
 ## 로컬 실행
 
@@ -42,6 +51,16 @@ pnpm dev
 ```
 
 `http://localhost:3000` 에서 확인할 수 있습니다.
+
+`pnpm install` 때 Panda CSS 코드 생성(`panda codegen`)이 함께 실행되어 `styled-system/`이 만들어집니다.
+디자인 토큰이나 recipe를 바꾼 뒤에는 `pnpm panda codegen`을 다시 실행하세요.
+
+## 검사
+
+```bash
+pnpm lint
+npx tsc --noEmit
+```
 
 ## 빌드
 
