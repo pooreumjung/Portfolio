@@ -3,5 +3,6 @@ export interface MoreProject {
   meta: string;
   description: string;
   tags: string[];
+  links?: { label: string; href: string }[];
   featured?: boolean;
 }

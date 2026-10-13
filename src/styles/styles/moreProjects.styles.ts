@@ -1,15 +1,12 @@
 import { css } from "@/styled-system/css";
 
-export const sectionWrapperStyles = css({
-  maxWidth: "1280px",
-  margin: "0 auto",
-  padding: { base: "58px 32px", md: "86px 32px" },
-});
+export const toggleRowStyles = css({ display: "flex", justifyContent: "center", marginTop: "32px" });
 
 export const gridStyles = css({
   display: "grid",
   gridTemplateColumns: { base: "1fr", md: "repeat(2, minmax(0, 1fr))", lg: "repeat(3, minmax(0, 1fr))" },
   gap: "16px",
+  marginTop: "20px",
 });
 
 export const featuredItemStyles = css({ gridColumn: "1 / -1" });
@@ -30,6 +27,8 @@ export const descriptionStyles = css({ margin: 0, color: "muted", fontSize: "bas
 
 // marginTop auto pins tags to the card bottom so rows line up across cards
 export const tagRowStyles = css({ display: "flex", flexWrap: "wrap", gap: "6px", marginTop: "auto", paddingTop: "4px" });
+
+export const linkRowStyles = css({ display: "flex", flexWrap: "wrap", gap: "16px", paddingTop: "6px" });
 
 export const tagStyles = css({
   padding: "4px 10px",

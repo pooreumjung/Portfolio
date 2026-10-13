@@ -1,8 +1,10 @@
 "use client";
 
 import { useScrollAnimation } from "@hooks/index";
+import { MORE_PROJECTS_COPY } from "@/constants/moreProjects.constant";
 import { PROJECTS_COPY } from "@/constants/projects.copy";
 import { projects } from "@/constants/projects.constant";
+import { toggleRowStyles } from "@/styles/styles/moreProjects.styles";
 import { PROJECTS_ANIMATIONS_CONFIG, projectsCardVariants } from "@/styles/animations/projects.animations";
 import {
   bannerEyebrowStyles,
@@ -30,6 +32,8 @@ import {
   titleStyles,
   toneGradients,
 } from "@/styles/styles/projects.styles";
+import MoreProjects from "@sections/MoreProjects";
+import { Button } from "@ui/buttons";
 import { Card } from "@ui/cards";
 import { ExternalLinkIcon } from "@ui/icons/SocialIcons";
 import { ProjectModal } from "@ui/modals";
@@ -63,6 +67,7 @@ export default function Projects() {
   const { ref, inView } = useScrollAnimation({ threshold: 0.15 });
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [showMore, setShowMore] = useState(false);
   const [expandedStacks, setExpandedStacks] = useState<Set<string>>(new Set());
 
   const openModal = (project: Project) => {
@@ -213,6 +218,18 @@ export default function Projects() {
             </Card>
           </motion.div>
         ))}
+      </div>
+
+      {showMore && <MoreProjects />}
+      <div className={toggleRowStyles}>
+        <Button
+          variant="outline"
+          aria-expanded={showMore}
+          aria-controls="more-projects"
+          onClick={() => setShowMore((prev) => !prev)}
+        >
+          {showMore ? MORE_PROJECTS_COPY.collapseLabel : MORE_PROJECTS_COPY.expandLabel}
+        </Button>
       </div>
 
       <ProjectModal project={selectedProject} isOpen={isModalOpen} onClose={closeModal} />
